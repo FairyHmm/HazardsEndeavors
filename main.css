@@ -1,0 +1,57 @@
+:root {
+  --bkg: #360900;
+  --txt: #ffffff;
+  --red: rgb(240, 0, 0);
+  --orange: rgb(245, 115, 0);
+  --pink: rgb(250, 0, 120);
+}
+
+html, body {
+  font-size: 40px;
+  font-family: "Rubik", sans-serif;
+  background: var(--bkg);
+  height: 100%;
+  margin: 0;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+}
+
+.main {
+  overflow: hidden;
+  color: var(--txt);
+  text-align: center;
+  max-width: fit;
+  padding: 2em;
+}
+
+.h2 {
+  display: inline-block;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+#magic-text {
+  display: inline-block;
+  position: relative;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--red),
+    var(--orange),
+    var(--pink),
+    var(--red)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
