@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="87.887177mm"
+   height="135.46062mm"
+   viewBox="0 0 87.887177 135.46061"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="elements.svg"
+   inkscape:export-filename="fire.svg"
+   inkscape:export-xdpi="84.575256"
+   inkscape:export-ydpi="84.575256"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.38484849"
+     inkscape:cx="111.73228"
+     inkscape:cy="682.08661"
+     inkscape:window-width="1827"
+     inkscape:window-height="1057"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs2" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-83.573964,-70.082489)"><path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 171.46113,161.76461 c 0,24.17816 -19.67415,43.77849 -43.94358,43.77849 -24.26944,0 -43.943594,-19.60033 -43.943594,-43.77849 0,-23.51511 41.566574,-88.097541 43.846224,-91.621821 0.0521,-0.0804 0.14287,-0.0804 0.19473,0 2.27965,3.52428 43.84622,68.106711 43.84622,91.621821 z m -51.26884,29.7434 c -22.299084,-4.87918 -18.48326,-29.58068 -18.48326,-29.58068 0,0 6.08912,14.91139 20.86583,19.74162 14.77645,4.82997 32.63371,-2.25398 32.63371,-2.25398 0,0 -12.7172,16.97196 -35.01628,12.09304 z"
+       fill="#ffffff"
+       id="path2704"
+       style="fill:#2980ef;fill-opacity:1;stroke-width:0.264583"
+       inkscape:label="water" /></g></svg>

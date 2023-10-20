@@ -1,0 +1,55 @@
+@import "/css/core.css";
+
+.article {
+    color: var(--txt);
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    max-width: fit;
+    padding: 3em;
+    font-size: 150%;
+}
+
+.article .anchor .hash {
+    opacity: 0;
+    text-decoration: none;
+    color: var(--accent-fg);
+    transition: .5s;
+}
+
+.article .anchor:hover .hash {
+    opacity: 1;
+    transition: .5s;
+}
+
+.article .anchor:hover .hash:hover {
+    text-decoration: underline solid var(--accent-fg) 5px;
+}
+
+.article * {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.article>* {
+    transition: .2s;
+    box-shadow: -15px 0 0 0 var(--bkg);
+}
+
+.article>*:hover {
+    box-shadow: -15px 0 0 0 var(--bkg), -20px 0 0 0 var(--accent-bkg);
+}
+
+.article h1 {
+    font-size: 300%;
+    border-bottom: 1px solid var(--accent-fg);
+}
+
+.article h2 {
+    margin-top: .5em;
+    border-bottom: 1px solid White;
+}
+
+.article p em {
+    color: var(--accent-fg);
+}

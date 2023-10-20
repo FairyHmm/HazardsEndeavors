@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Learn more!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/learn/learn.css" />
+  <script src="/js/core.js"></script>
+  <script src="/learn/learn.js"></script>
+</head>
+
+<body>
+  <noscript>
+    <p class="noscript">
+      JavaScript is not enabled. Some functions may not work properly.
+    </p>
+  </noscript>
+  <!--Nav bar-->
+  <div class="nav">
+    <div class="box"></div>
+    <input type="checkbox" id="openSideMenu" class="openSideMenu" onclick="openNav()" />
+    <label for="openSideMenu" class="menuIconToggle">
+      <div class="hamb-line dia p-1"></div>
+      <div class="hamb-line hor"></div>
+      <div class="hamb-line dia p-2"></div>
+    </label>
+    <div id="mySidenav" class="sidenav">
+      <a id="inactive" href="/">Main</a>
+      <a id="inactive" href="/play">Play</a>
+      <a id="active">Learn</a>
+      <a id="inactive" href="/about">About</a>
+    </div>
+  </div>
+  <!--Text-->
+  <span class="main">
+    <h1>Learn more!</h1>
+    <p>Cannot go wrong with the traditional method!</p>
+
+    <div class="buttons">
+      <button class="btn learn" onclick="toggleLearn()" aria-label="Unlocking knowledge, one article at a time!" data-balloon-pos="up">Start learning</button>
+      <button class="btn quiz" onclick="toggleQuiz()" aria-label="Test your knowledge on what you have learnt about!" data-balloon-pos="up">Take a quiz</button>
+      <div id="learn-list" class="dropdown-content">
+        <a class="btn" id="fire" href="/learn/fire/learn">Fire</a>
+        <a class="btn" id="water" href="/learn/water/learn">Water</a>
+        <a class="btn" id="air" href="/learn/air/learn">Air</a>
+        <a class="btn" id="earth" href="/learn/earth/learn">Earth</a>
+      </div>
+      <div id="quiz-list" class="dropdown-content">
+        <a class="btn" id="fire" href="/learn/fire/quiz">Fire</a>
+        <a class="btn" id="water" href="/learn/water/quiz">Water</a>
+        <a class="btn" id="air" href="/learn/air/quiz">Air</a>
+        <a class="btn" id="earth" href="/learn/earth/quiz">Earth</a>
+      </div>
+    </div>
+  </span>
+
+</body>
+
+</html>

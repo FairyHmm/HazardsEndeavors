@@ -1,0 +1,148 @@
+@import "/css/core.css";
+
+.categories {
+  width: 100%;
+}
+
+.elements {
+  border-radius: 30px;
+  color: var(--txt);
+  font-size: 25px;
+  padding: 2em;
+  margin: 1em;
+}
+
+#fire {
+  background-color: var(--fire-bkg);
+}
+
+#water {
+  background-color: var(--water-bkg);
+}
+
+#air {
+  background-color: var(--air-bkg);
+}
+
+#earth {
+  background-color: var(--earth-bkg);
+}
+
+.cards {
+  display: inline-flex;
+  flex-direction: row;
+  overflow: auto;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.game {
+  border-radius: 25px;
+  background: var(--game);
+  margin: 0.5em;
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.thumb {
+  object-fit: fill;
+  position: absolute;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.info {
+  background: linear-gradient(var(--empty) 50%, var(--game) 75%);
+  border-radius: 25px;
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: 0.5s ease, background 1s ease;
+  z-index: 1;
+  margin: 0;
+}
+
+.info p {
+  color: var(--bkg);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0.5em;
+  transition: 0.5s ease, color 1s ease;
+  z-index: 1;
+}
+
+.info::before {
+  position: absolute;
+  content: '';
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(var(--empty) 50%, var(--bkg) 75%);
+  z-index: 0;
+  transition: 0.5s ease, color 1s ease;
+  opacity: 0;
+}
+
+.info:hover::before {
+  opacity: 1;
+}
+
+.info:hover p {
+  color: var(--game);
+}
+
+#fire2 {
+  background: linear-gradient(to right, Red, Orange, MediumVioletRed, Red);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#water2 {
+  background: linear-gradient(to right, DodgerBlue, Cyan, Blue, DodgerBlue);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#air2 {
+  background: linear-gradient(to right, Turquoise, MediumSpringGreen, Aquamarine, Turquoise);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#earth2 {
+  background: linear-gradient(to right, Olive, SaddleBrown, SandyBrown, Olive);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}

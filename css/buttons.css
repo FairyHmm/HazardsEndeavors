@@ -1,0 +1,30 @@
+.buttons {
+  width: auto;
+}
+
+.btn {
+  padding: 0.5em;
+  margin: 1em;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: var(--bkg);
+  border: 3px solid var(--fg-hover);
+  border-radius: 2em;
+  color: var(--fg-hover);
+  transition: 0.5s ease, color 1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  min-width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--fg-hover);
+  color: var(--bkg);
+}
+
+.btn {
+  text-decoration: none;
+}

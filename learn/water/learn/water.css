@@ -1,0 +1,6 @@
+@import "/css/article.css";
+
+:root {
+    --accent-bkg: var(--water-bkg);
+    --accent-fg: var(--water-fg);
+}

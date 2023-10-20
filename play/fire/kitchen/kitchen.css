@@ -1,0 +1,30 @@
+@import "/css/core.css";
+
+html, body, .interact {
+    height: 100%;
+    width: 100%;
+}
+
+.interact {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.game, .prompt {
+    height: 100%;
+    width: 100%;
+}
+
+.game {
+    background-color: darkblue;
+}
+
+.prompt {
+    background-color: darkgreen;
+}
+
+@media screen and (max-width: 600px) {
+    .interact {
+      flex-direction: column;
+    }
+  }
