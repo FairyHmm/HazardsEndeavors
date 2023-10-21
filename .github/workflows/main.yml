@@ -10,10 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Deploy to Neocities
-        uses: neocities/neocities-deploy-action@v1
+        uses: bcomnes/deploy-to-neocities@v1.1.19
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
