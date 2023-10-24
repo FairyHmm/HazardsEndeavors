@@ -9,21 +9,23 @@
   --fg: #181818;
   --fg-hover: #4cc9f0;
   --fg-selected: #4361ee;
-  --unused2: #3a0ca3;
-  --unused3: #f72585;
   --txt: #ffffff;
   --nav: #43026e;
-  --game: #ffffff;
+  --card: #ffffff;
   --fade: #01222d;
   --empty: #00000000;
-  --fire-bkg: #5a0000;
-  --water-bkg: #001555;
-  --air-bkg: #005451;
-  --earth-bkg: #451e03;
-  --fire-fg: #ff0000;
-  --water-fg: #0040ff;
-  --air-fg: #00fff7;
-  --earth-fg: #ff6a00;
+  --fire-bkg: #471313;
+  --fire-fg: #ff4444;
+  --fire-emp: #ff1c1c;
+  --water-bkg: #152557;
+  --water-fg: #3d6eff;
+  --water-emp: #2b60ff;
+  --air-bkg: #19493c;
+  --air-fg: #32be96;
+  --air-emp: #64eec7;
+  --earth-bkg: #382416;
+  --earth-fg: #d08550;
+  --earth-emp: #f58434;
 }
 
 * {
@@ -39,7 +41,7 @@ body {
   font-size: 200%;
   font-family: "Rubik", sans-serif;
   height: 100%;
-  margin: 0;
+  margin: 1em;
   display: grid;
   overflow: hidden;
   text-align: center;

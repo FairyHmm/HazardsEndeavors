@@ -10,12 +10,12 @@ html, body, .interact {
     flex-direction: row;
 }
 
-.game, .prompt {
+.card, .prompt {
     height: 100%;
     width: 100%;
 }
 
-.game {
+.card {
     background-color: darkblue;
 }
 

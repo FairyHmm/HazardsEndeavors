@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.elements {
+.category {
   border-radius: 30px;
   color: var(--txt);
   font-size: 25px;
@@ -42,9 +42,9 @@
   display: none;
 }
 
-.game {
+.card {
   border-radius: 25px;
-  background: var(--game);
+  background: var(--card);
   margin: 0.5em;
   width: 300px;
   max-width: 300px;
@@ -52,6 +52,8 @@
   height: 200px;
   position: relative;
   z-index: 1;
+  padding: 0;
+  border: 0px;
 }
 
 .thumb {
@@ -62,20 +64,35 @@
 }
 
 .info {
-  background: linear-gradient(var(--empty) 50%, var(--game) 75%);
-  border-radius: 25px;
-  height: 100%;
-  width: 100%;
+  height: inherit;
+  width: inherit;
   display: inline-flex;
   justify-content: flex-end;
   align-items: flex-end;
   transition: 0.5s ease, background 1s ease;
   z-index: 1;
   margin: 0;
+  padding: 0;
+}
+
+#fire .cards .card .info {
+  background: linear-gradient(var(--empty) 50%, var(--fire-bkg) 75%);
+}
+
+#water .cards .card .info {
+  background: linear-gradient(var(--empty) 50%, var(--water-bkg) 75%);
+}
+
+#air .cards .card .info {
+  background: linear-gradient(var(--empty) 50%, var(--air-bkg) 75%);
+}
+
+#earth .cards .card .info {
+  background: linear-gradient(var(--empty) 50%, var(--earth-bkg) 75%);
 }
 
 .info p {
-  color: var(--bkg);
+  color: var(--card);
   font-size: 25px;
   font-weight: bold;
   margin: 0.5em;
@@ -83,7 +100,8 @@
   z-index: 1;
 }
 
-.info::before {
+* .cards .card .info::before {
+  background: linear-gradient(var(--empty) 50%, var(--card) 75%);
   position: absolute;
   content: '';
   border-radius: 25px;
@@ -91,22 +109,21 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(var(--empty) 50%, var(--bkg) 75%);
   z-index: 0;
   transition: 0.5s ease, color 1s ease;
   opacity: 0;
 }
 
-.info:hover::before {
+* .cards .card .info:hover::before {
   opacity: 1;
 }
 
 .info:hover p {
-  color: var(--game);
+  color: var(--bkg);
 }
 
 #fire2 {
-  background: linear-gradient(to right, Red, Orange, MediumVioletRed, Red);
+  background: linear-gradient(to right, #ff5b5b, #ffa463, #ff56ad, #ff5b5b);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -114,7 +131,7 @@
 }
 
 #water2 {
-  background: linear-gradient(to right, DodgerBlue, Cyan, Blue, DodgerBlue);
+  background: linear-gradient(to right, #85baee, #8ffafa, #8c8cf8, #85baee);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -122,7 +139,7 @@
 }
 
 #air2 {
-  background: linear-gradient(to right, Turquoise, MediumSpringGreen, Aquamarine, Turquoise);
+  background: linear-gradient(to right, #40e0d0, #82f2c7, #7fffd4, #40e0d0);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -130,7 +147,7 @@
 }
 
 #earth2 {
-  background: linear-gradient(to right, Olive, SaddleBrown, SandyBrown, Olive);
+  background: linear-gradient(to right, #ecec87, #eaaa7d, #f7bd8a, #ecec87);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -145,4 +162,11 @@
   to {
     background-position: -200% center;
   }
+}
+
+.thumb {
+  max-width: 90%;
+  max-height: 90%;
+  display: grid;
+  place-items: center;
 }

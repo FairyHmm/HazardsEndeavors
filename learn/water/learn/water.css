@@ -3,4 +3,5 @@
 :root {
     --accent-bkg: var(--water-bkg);
     --accent-fg: var(--water-fg);
+    --accent-emp: var(--water-emp);
 }

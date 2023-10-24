@@ -3,4 +3,5 @@
 :root {
     --accent-bkg: var(--fire-bkg);
     --accent-fg: var(--fire-fg);
+    --accent-emp: var(--fire-emp);
 }

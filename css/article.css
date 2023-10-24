@@ -13,7 +13,7 @@
 .article .anchor .hash {
     opacity: 0;
     text-decoration: none;
-    color: var(--accent-fg);
+    color: var(--accent-emp);
     transition: .5s;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .article .anchor:hover .hash:hover {
-    text-decoration: underline solid var(--accent-fg) 5px;
+    text-decoration: underline solid var(--accent-emp) 5px;
 }
 
 .article * {
@@ -42,7 +42,7 @@
 
 .article h1 {
     font-size: 300%;
-    border-bottom: 1px solid var(--accent-fg);
+    border-bottom: 1px solid var(--accent-emp);
 }
 
 .article h2 {
