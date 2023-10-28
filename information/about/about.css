@@ -1,0 +1,48 @@
+@import "/css/core.css";
+
+.people {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.major {
+    width: 100%;
+}
+
+.people .major {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: .5em;
+}
+
+.person {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: .5em;
+}
+
+@media screen and (max-width: 1200px) {
+    .people .major {
+      flex-direction: column;
+    }
+    .person {
+        width: 100%;
+    }
+}
+
+.thumb {
+    flex: 1;
+    margin-right: 10px;
+    margin: .5em;
+}
+
+.text {
+    text-align: left;
+    flex: 1;
+    width: 50%;
+    margin: .5em;
+}

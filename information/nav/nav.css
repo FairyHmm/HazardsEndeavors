@@ -1,0 +1,7 @@
+@import "/css/article.css";
+
+:root {
+    --accent-bkg: var(--nav-bkg);
+    --accent-fg: var(--nav-fg);
+    --accent-emp: var(--nav-emp);
+}

@@ -1,0 +1,16 @@
+@import "/css/core.css";
+
+.buttons {
+    flex-direction: column;
+    place-items: center;
+}
+
+.btn {
+    width: 500px;
+}
+
+@media screen and (max-width: 700px) {
+    .btn {
+        width: 100%;
+    }
+}

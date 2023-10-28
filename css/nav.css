@@ -20,11 +20,11 @@ body {
   z-index: 2;
   top: 0;
   right: 0;
-  background-color: var(--nav);
+  background-color: var(--nav-bkg);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 61px;
-  border-left: 2px solid var(--nav);
+  border-left: 2px solid var(--nav-bkg);
 }
 
 .sidenav a {
@@ -111,7 +111,7 @@ input[type="checkbox"]:checked ~ .menuIconToggle > .dia.p-2 {
   height: 70px;
   width: 70px;
   border-radius: 0 0 0 50px;
-  background-color: var(--nav);
+  background-color: var(--nav-bkg);
   right: 0;
   position: fixed;
 }

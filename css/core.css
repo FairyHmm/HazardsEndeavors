@@ -10,21 +10,23 @@
   --fg-hover: #4cc9f0;
   --fg-selected: #4361ee;
   --txt: #ffffff;
-  --nav: #43026e;
   --card: #ffffff;
   --fade: #01222d;
   --empty: #00000000;
+  --nav-bkg: #43026e;
+  --nav-fg: #c977ff;
+  --nav-emp: #9a15f3;
   --fire-bkg: #471313;
   --fire-fg: #ff4444;
   --fire-emp: #ff1c1c;
   --water-bkg: #152557;
-  --water-fg: #3d6eff;
+  --water-fg: #5881fa;
   --water-emp: #2b60ff;
   --air-bkg: #19493c;
-  --air-fg: #32be96;
-  --air-emp: #64eec7;
+  --air-fg: #7df8d5;
+  --air-emp: #32be96;
   --earth-bkg: #382416;
-  --earth-fg: #d08550;
+  --earth-fg: #eca572;
   --earth-emp: #f58434;
 }
 
@@ -39,7 +41,7 @@ body {
 .main {
   color: var(--txt);
   font-size: 200%;
-  font-family: "Rubik", sans-serif;
+  font-family: "FuturaHandwritten", sans-serif;
   height: 100%;
   margin: 1em;
   display: grid;
