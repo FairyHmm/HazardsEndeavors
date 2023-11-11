@@ -1,0 +1,53 @@
+@import "/css/core.css";
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+li {
+    padding-bottom: 2rem;
+    border-left: 1px solid var(--nav-emp);
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+li:last-child {
+    border: 0px;
+    padding-bottom: 0;
+}
+
+li p img {
+    height: 30px;
+}
+
+li:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid var(--nav-emp);
+    box-shadow: 2px 2px 0px var(--nav-fg);
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+
+.time {
+    font-size: 2px;
+    font-weight: bold;
+}
+
+li p a {
+    text-decoration: none;
+}

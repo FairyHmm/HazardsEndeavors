@@ -1,19 +1,14 @@
 @import "/css/core.css";
 
-.main {
-  place-items: center;
-}
-
-.img {
-  width: 300px;
-  height: 300px;
-  padding: 1em;
-}
-
 #endeavors {
   background: linear-gradient(to right, BlueViolet, CornflowerBlue, DeepPink, BlueViolet);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+  flex: 1;
+  overflow: hidden;
 }

@@ -5,7 +5,8 @@ body {
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; 
 }
 
 .openSideMenu {
@@ -115,5 +116,3 @@ input[type="checkbox"]:checked ~ .menuIconToggle > .dia.p-2 {
   right: 0;
   position: fixed;
 }
-
-/* aaa */
