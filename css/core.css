@@ -47,9 +47,9 @@ body {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  overflow: hidden;
   text-align: center;
   max-width: fit;
+  overflow: hidden;
 }
 
 .main h1 {

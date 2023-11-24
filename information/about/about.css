@@ -1,5 +1,9 @@
 @import "/css/core.css";
 
+.main {
+    padding: 2em;
+}
+
 .people {
     display: flex;
     flex-direction: column;
@@ -45,11 +49,16 @@
     margin: .5em;
 }
 
-.social-media div {
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media div, .social-media a {
     width: 48px;
     margin-top: .5em;
 }
 
-.social-media div img {
-    width: 100%;
+.social-media div img, .social-media a img {
+    width: 48px;
 }

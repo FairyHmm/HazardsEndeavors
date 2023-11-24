@@ -1,5 +1,9 @@
 @import "/css/core.css";
 
+.main {
+    padding: 2em;
+}
+
 ul,
 li {
     list-style: none;
@@ -44,10 +48,13 @@ li:before {
 }
 
 .time {
-    font-size: 2px;
     font-weight: bold;
 }
 
 li p a {
     text-decoration: none;
+}
+
+.sessions li p a:visited {
+  color: var(--nav-fg);
 }

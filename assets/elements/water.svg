@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="87.887177mm"
-   height="135.46062mm"
-   viewBox="0 0 87.887177 135.46061"
+   width="19.464073mm"
+   height="30mm"
+   viewBox="0 0 19.464073 30"
    version="1.1"
    id="svg5"
    xml:space="preserve"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.38484849"
-     inkscape:cx="111.73228"
-     inkscape:cy="682.08661"
+     inkscape:zoom="2.1770318"
+     inkscape:cx="144.00341"
+     inkscape:cy="143.08472"
      inkscape:window-width="1827"
      inkscape:window-height="1057"
      inkscape:window-x="-9"
@@ -40,11 +40,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-83.573964,-70.082489)"><path
+     transform="translate(76.42604,-70.082489)"><path
        fill-rule="evenodd"
        clip-rule="evenodd"
-       d="m 171.46113,161.76461 c 0,24.17816 -19.67415,43.77849 -43.94358,43.77849 -24.26944,0 -43.943594,-19.60033 -43.943594,-43.77849 0,-23.51511 41.566574,-88.097541 43.846224,-91.621821 0.0521,-0.0804 0.14287,-0.0804 0.19473,0 2.27965,3.52428 43.84622,68.106711 43.84622,91.621821 z m -51.26884,29.7434 c -22.299084,-4.87918 -18.48326,-29.58068 -18.48326,-29.58068 0,0 6.08912,14.91139 20.86583,19.74162 14.77645,4.82997 32.63371,-2.25398 32.63371,-2.25398 0,0 -12.7172,16.97196 -35.01628,12.09304 z"
+       d="m -56.961968,90.387018 c 0,5.354652 -4.357169,9.695472 -9.732035,9.695472 -5.37487,0 -9.732037,-4.34082 -9.732037,-9.695472 0,-5.207812 9.205606,-19.510661 9.710473,-20.291172 0.01154,-0.01781 0.03164,-0.01781 0.04313,0 0.504864,0.780511 9.710471,15.08336 9.710471,20.291172 z m -11.354335,6.587166 c -4.938502,-1.080576 -4.093424,-6.55113 -4.093424,-6.55113 0,0 1.348536,3.302377 4.621083,4.372111 3.272491,1.069673 7.227277,-0.499182 7.227277,-0.499182 0,0 -2.816436,3.758723 -7.754936,2.678201 z"
        fill="#ffffff"
        id="path2704"
-       style="fill:#2980ef;fill-opacity:1;stroke-width:0.264583"
-       inkscape:label="water" /></g></svg>
+       style="fill:#2b60ff;fill-opacity:1;stroke-width:0.0585963"
+       inkscape:label="water"
+       inkscape:export-filename=".\water.svg"
+       inkscape:export-xdpi="84.575256"
+       inkscape:export-ydpi="84.575256" /></g></svg>

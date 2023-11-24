@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="135.46623mm"
-   height="98.212997mm"
-   viewBox="0 0 135.46623 98.212996"
+   width="41.379318mm"
+   height="30.00004mm"
+   viewBox="0 0 41.379319 30.00004"
    version="1.1"
    id="svg5"
    xml:space="preserve"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.38484849"
-     inkscape:cx="111.73228"
-     inkscape:cy="682.08661"
+     inkscape:zoom="2.1770318"
+     inkscape:cx="144.00341"
+     inkscape:cy="143.08472"
      inkscape:window-width="1827"
      inkscape:window-height="1057"
      inkscape:window-x="-9"
@@ -40,11 +40,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-58.573979,-270.0825)"><path
+     transform="translate(76.42604,-110.08249)"><path
        fill-rule="evenodd"
        clip-rule="evenodd"
-       d="m 88.409433,367.91317 c -0.03678,0 -0.06244,-0.0362 -0.05027,-0.0709 l 34.585007,-97.72438 c 0.008,-0.0212 0.0278,-0.0354 0.0503,-0.0354 h 36.92049 c 0.0225,0 0.0429,0.0143 0.0503,0.0357 l 34.07199,97.72441 c 0.0119,0.0347 -0.0138,0.0706 -0.0503,0.0706 H 89.448716 Z m -29.782213,0.38232 c -0.03715,0 -0.06286,-0.037 -0.04983,-0.0717 l 25.754446,-68.7578 c 0.0078,-0.0209 0.02765,-0.0347 0.04985,-0.0347 h 22.377664 c 0.037,0 0.0627,0.0368 0.05,0.0714 l -24.903826,68.7578 c -0.0076,0.0209 -0.02762,0.0349 -0.05003,0.0349 z"
+       d="m -67.312539,139.96575 c -0.01124,0 -0.01907,-0.011 -0.01535,-0.0217 l 10.564288,-29.85076 c 0.0025,-0.006 0.0085,-0.0108 0.01537,-0.0108 h 11.277686 c 0.0068,0 0.01308,0.004 0.01536,0.0109 l 10.407578,29.85076 c 0.0036,0.0106 -0.0042,0.0216 -0.01536,0.0216 h -31.932106 z m -9.097233,0.11678 c -0.01135,0 -0.0192,-0.0113 -0.01522,-0.0219 l 7.866917,-21.00266 c 0.0024,-0.006 0.0084,-0.0106 0.01523,-0.0106 h 6.83545 c 0.0113,0 0.01915,0.0112 0.01528,0.0218 l -7.607088,21.00266 c -0.0023,0.006 -0.0084,0.0107 -0.01528,0.0107 z"
        fill="#ffffff"
        id="path2682"
-       style="fill:#da7844;fill-opacity:1;stroke-width:0.264583"
-       inkscape:label="earth" /></g></svg>
+       style="fill:#f58434;fill-opacity:1;stroke-width:0.0808194"
+       inkscape:label="earth"
+       inkscape:export-filename=".\earth.svg"
+       inkscape:export-xdpi="84.575256"
+       inkscape:export-ydpi="84.575256" /></g></svg>
