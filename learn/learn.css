@@ -1,83 +1,10 @@
 @import "/css/core.css";
+@import "/css/cards.css";
 
-.learn-list, .quiz-list {
-  position: absolute;
-  display: block;
-  line-height: 30px;
-  padding: 0 15px;
-}
-
-.dropdown-content {
-  line-height: 1.5;
-  height: 0;
-  transition: height 1s ease;
-  overflow: hidden;
-  margin: 0;
-  background-color: var(--bkg2);
-  place-items: initial;
-}
-
-.dropdown-content p {
-  display: grid;
-  place-items: center;
-}
-
-.dropdown-content .btn {
-  background-color: var(--bkg2);
-}
-
-.show {
-  height: 100px;
-}
-
-#fire {
-  color: var(--fire-fg);
-  background-color: var(--bkg2);
-  border: 3px solid var(--fire-fg);
-  border-radius: 2em;
-  color: var(--fire-fg);
-}
-
-#fire:hover {
-  background-color: var(--fire-fg);
-  color: var(--bkg2);
-}
-
-#water {
-  color: var(--water-fg);
-  background-color: var(--bkg2);
-  border: 3px solid var(--water-fg);
-  border-radius: 2em;
-  color: var(--water-fg);
-}
-
-#water:hover {
-  background-color: var(--water-fg);
-  color: var(--bkg2);
-}
-
-#air {
-  color: var(--air-fg);
-  background-color: var(--bkg2);
-  border: 3px solid var(--air-fg);
-  border-radius: 2em;
-  color: var(--air-fg);
-}
-
-#air:hover {
-  background-color: var(--air-fg);
-  color: var(--bkg2);
-}
-
-#earth {
-  color: var(--earth-fg);
-  background-color: var(--bkg2);
-  border: 3px solid var(--earth-fg);
-  border-radius: 2em;
-  color: var(--earth-fg);
-}
-
-#earth:hover {
-  background-color: var(--earth-fg);
-  color: var(--bkg2);
+.cards {
+  opacity: 0;
+  transition: opacity 0.5s;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

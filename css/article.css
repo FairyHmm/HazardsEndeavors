@@ -1,5 +1,9 @@
 @import "/css/core.css";
 
+body {
+    scrollbar-color: var(--accent-emp) var(--accent-bkg);
+}
+
 .article {
     box-sizing: padding-box;
     -moz-box-sizing: padding-box;
@@ -9,10 +13,10 @@
     min-height: 100%;
     display: grid;
     max-width: fit;
-    padding: 3em;
     font-size: 125%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+    margin: 3em;
 }
 
 .article .anchor .hash {
@@ -57,4 +61,9 @@
 
 .article p em {
     color: var(--accent-fg);
+}
+
+.padding {
+    height: 3em;
+    width: .1px;
 }

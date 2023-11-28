@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500mm"
+   height="300mm"
+   viewBox="0 0 500 300"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="unknown.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.3307123"
+     inkscape:cx="382.5077"
+     inkscape:cy="787.69371"
+     inkscape:window-width="1827"
+     inkscape:window-height="1057"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2" />
+  <rect
+     style="display:inline;stroke-width:9.01395305;stroke-dasharray:none;fill:#222222;stroke-linejoin:round;paint-order:fill markers stroke;fill-opacity:1"
+     id="rect1893"
+     width="1545.6714"
+     height="951.922"
+     x="2362.3721"
+     y="-1046.5503"
+     transform="matrix(0.33281736,0,0,0.33281736,-791.83868,341.9098)"
+     rx="1.5899611"
+     ry="142.11595" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="rotate(-28.298313,834.66718,200.97026)">
+    <g
+       id="g14"
+       inkscape:label="earth"
+       inkscape:groupmode="layer"
+       inkscape:highlight-color="#16355b"
+       transform="matrix(0.26458333,0,0,0.26458333,-475.75427,-338.92652)" />
+    <g
+       id="g13"
+       inkscape:label="volcano"
+       style="display:inline"
+       transform="matrix(0.3328136,-0.00158059,0.00158059,0.3328136,-661.86212,-393.86292)"
+       inkscape:groupmode="layer"
+       inkscape:highlight-color="#ff5500" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:244.209px;font-family:Arial;-inkscape-font-specification:Arial;fill:#ffffff;stroke-width:4.80727;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0"
+     x="47.048962"
+     y="238.89542"
+     id="text421"><tspan
+       sodipodi:role="line"
+       id="tspan419"
+       style="font-size:244.209px;fill:#ff0000;fill-opacity:1;stroke-width:4.80727"
+       x="47.048962"
+       y="238.89542">???</tspan></text>
+</svg>
