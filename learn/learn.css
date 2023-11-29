@@ -3,7 +3,8 @@
 
 .cards {
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 1s;
+  pointer-events: none;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;

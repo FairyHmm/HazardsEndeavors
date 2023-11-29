@@ -40,14 +40,24 @@ body {
     margin-bottom: .5em;
 }
 
-.article>* {
+.article h1, .article h2, .article h3, .article p {
     transition: .2s;
     box-shadow: -15px 0 0 0 var(--bkg);
 }
 
-.article>*:hover {
+.article ul li {
+    transition: .2s;
+    box-shadow: -30px 0 0 0 var(--bkg);
+}
+
+.article h1:hover, .article h2:hover, .article h3:hover, .article p:hover, .article ul li:hover {
     box-shadow: -15px 0 0 0 var(--bkg), -20px 0 0 0 var(--accent-bkg);
 }
+
+.article ul li:hover {
+    box-shadow: -30px 0 0 0 var(--bkg), -35px 0 0 0 var(--accent-bkg);
+}
+
 
 .article h1 {
     font-size: 250%;
@@ -66,4 +76,8 @@ body {
 .padding {
     height: 3em;
     width: .1px;
+}
+
+strong {
+    font-weight: bold;
 }

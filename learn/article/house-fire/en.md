@@ -5,95 +5,29 @@
 	em {color: orange}
 </style>
 
-# House fire
+# Flood
 
-A house fire occurs when a fire rapidly spreads within a house or building, typically originating from a small flame and quickly spreading due to the flammability of materials and the presence of oxygen.
+Floods are the phenomenon of a land that is flooded for a certain period of time may be due to no drainage or too large water level exceeding the regulations causing shutter. Floods occur with fast flowing water at high speed, unexpectedly, capable of swept away many things.
 
-## Causes
+## Reason:
 
-House fires can occur due to accidents or human carelessness. Here are some common causes
+- ** tide and tide: ** When sea level rises due to tide or tide, water may flood into the mainland and cause floods.
+- ** Heavy rains: ** Heavy rain in a short time or continuous rain can increase the water level in the river, lake and rivers, leading to floods.
+- ** The landing of the storm: ** The storm can carry heavy rain and strong winds, causing floods when water spills out of the river and lake.
+- ** The cracking of the dam: ** If the dam cannot be tolerated with water pressure or broken, the water may spill and cause floods.
+- ** Terrain characteristics: ** Some areas with low terrain, plains or poor drainage systems can easily flood when heavy rain or floods from rivers.
+- ** Climate change: ** Climate change may increase the frequency and intensity of heavy rain and floods.
 
-### Thermal Ignitions
+## Impact:
 
-The most common reason for residential fires is typically thermal ignitions. This can happen due to high temperatures from a fire source, electrical issues like short circuits, or the use of dangerous electrical appliances, all of which have the potential to start a fire.
+- ** Damage to facilities: ** Floods can damage houses, infrastructure, roads and public works. People may lose their houses, property and sources of life.
+- ** Environmental damage: ** Floods pollute water and soil. Floodwaters can contain pollutants from different sources such as chemicals, waste and sediments. This can harm the ecosystem of freshwater and the sea, causing damage to animals and plants.
+- ** Impact on people: ** Floods can cause loss of human life and health. It can cause casualties and diseases due to polluted floods, lack of clean water and poor living conditions. It can also cause migration and separation of family and community.
+- ** affect the economy: ** Floods cause significant damage to the economy. It interrupts production, agricultural and service activities. Businesses and employees may lose their jobs and income.
 
-### Flammable Substances
+## Situation measures:
 
-When flammable substances like oil, gasoline, gas, or other combustible liquids come in contact with a source of fire, it can lead to the rapid spread of fire. This contact creates conditions that promote the ignition and propagation of flames, significantly increasing the likelihood of fire-related incidents.
-
-### Chemicals
-
-Using and storing chemicals like explosives, industrial chemicals, and household chemicals in an unsafe manner can lead to fires. It is essential to handle and store these substances properly to reduce the risk of fire accidents.
-
-### Electrical System
-
-An unsafe electrical system, damaged electrical wires, overloading, or improper use can cause fires. To prevent electrical fires, it is critical to ensure that electrical systems are installed and maintained correctly.
-
-### Smoking
-
-Smoking indoors can pose a fire hazard if cigarettes are not properly extinguished or discarded. To minimise the risk of fire incidents, it is crucial to followproper smoking practices and ensure that cigarette butts are safely disposed of.
-
-### Electrical Equipment
-
-Fires can be caused by incidents or failures of electrical equipment such as televisions, air conditioners, washing machines, and refrigerators. Regular maintenance and proper usage of electrical appliances are essential to prevent such incidents.
-
-### Unsafe Practices
-
-Unsafe cooking practices, such as using an open fire or too many candles, can pose a fire hazard if safety rules are not followed. It is crucial to exercise caution while cooking and ensure that flammable materials are kept away from open flames.
-
-## Impacts
-
-### Danger to life and health
-
-House fires pose a significant threat to the lives and health of those in the house or nearby. The combination of toxic fumes, gases, and high temperatures can cause severe injury or even death. Household air pollution, which includes the release of toxic substances during fires, can have detrimental effects on human health.
-
-The release of harmful substances during fires, such as carbon monoxide, chemicals that evaporate easily, and tiny particles, can harm the respiratory system and increase the risk of heart diseases.
-
-### Psychological impact
-
-House fires can have a profound psychological impact on those affected. The loss of a home and personal belongings can lead to feelings of grief, sadness, and insecurity about the future. They may also experience trauma, anxiety, and fear related to the incident, and in some cases, develop symptoms of post-traumatic stress disorder (PTSD).
-
-### Physical damage and environmental impacts
-
-A house fire can cause extensive damage to both the structure of the house and the belongings inside. The heat and flames can weaken the structure of the building, leading to warping, cracking, or even collapse of walls, floors, and ceilings. The fire can also ruin furniture, appliances, clothes, electronics, and other valuable items.
-
-House fires can have harmful effects on the air quality in the surrounding area. When a fire occurs, it releases smoke, dust, and other pollutants into the air. These pollutants, such as carbon dioxide (CO<sub>2</sub>), carbon monoxide (CO), sulfur dioxide (SO<sub>2</sub>), nitrogen dioxide (NO<sub>2</sub>), and volatile organic compounds (VOCs), can be hazardous to human health and contribute to increased air pollution levels.
-
-Water damage is another common consequence of a house fire, as firefighters use water to extinguish the flames. This can result in further destruction to the house and its contents, as well as the potential for mold growth if not properly addressed.
-
-### Economic impact
-
-The destruction caused by a fire can lead to the loss of a home, personal belongings, and valuable assets. The financial toll includes the costs of rebuilding or repairing the damaged property, replacing lost belongings, and covering temporary housing expenses during the recovery period.
-
-## Preventive measures
-
-- Regularly inspect and maintain the electrical system to prevent electrical fires.
-- Handle and store chemicals safely to minimise the risk of accidental fires.
-- Comply with fire prevention regulations to ensure a safe environment.
-- Install automatic fire alarm and containment systems for early detection and control.
-- Keep flammable substances away from potential fire sources to prevent ignition.
-- Switch off the circuit breaker when leaving the house to reduce the risk of electrical fires.
-
-### Measures to handle the situation
-
-- Stay calm and avoid panic when a fire occurs.
-- Extinguish the fire using appropriate means, such as a fire extinguisher or fire blanket.
-
-### In case the fire spreads
-
-- Call for rescue immediately.
-- Identify safe escape routes.
-- Use a damp towel to cover one's nose when escaping to reduce smoke inhalation.
-- Keep one's body in a low position when moving to minimise exposure to heat and smoke.
-
-### In a high-rise building fire
-
-- Call for rescue to alert authorities about the situation.
-- Use damp blankets or other items to prevent smoke and gas from entering the room.
-- Wait for rescuers on the balcony.
-- Attract attention by shouting or using flashlights.
-
-### If the fire spreads onto the body
-
-- Avoid running around, as it can fan the flames and worsen burns.
-- Lie face down and roll back and forth to smother the flames and minimise burns.
+- ** Ensure personal safety: ** Always put your safety and family safety. If you find danger, move to a higher safe place, far from the flooded area. After the flood is over, wait until the government agencies confirm that the area is safe before returning home.
+- ** Listening to warnings and instructions: ** Monitoring information from government agencies, communications and relief organizations to know the flood situation and preventive measures.
+- ** Avoid contact with flood waters: ** Floodwaters can contain pollutants and endanger health. Limit exposure to floodwaters and ensure the use of clean water for drinking and living.
+- ** Contact relief organizations: ** If you need help in flood situations, please contact local relief organizations or government agencies for assistance.
