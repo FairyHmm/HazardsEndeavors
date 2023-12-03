@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="38.236149mm"
-   height="13.713238mm"
-   viewBox="0 0 144.51458 51.829561"
+   width="28.677mm"
+   height="9.8935909mm"
+   viewBox="0 0 108.38551 37.3931"
    version="1.1"
    id="svg1"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="5.715"
-     inkscape:cx="66.579178"
-     inkscape:cy="27.034121"
+     inkscape:cx="66.754156"
+     inkscape:cy="27.209099"
      inkscape:window-width="1827"
      inkscape:window-height="1057"
      inkscape:window-x="-9"
@@ -37,12 +37,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-211.43303,-407.07738)"><g
+     transform="translate(-211.43304,-407.07738)"><g
        id="g2981"
        inkscape:label="pan"
        inkscape:export-filename="pan.svg"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><g
+       inkscape:export-ydpi="96"
+       transform="matrix(0.74999721,0,0,0.74999721,52.858849,101.77048)"><g
          id="g42"
          inkscape:label="pan"
          style="display:inline;stroke-width:6.18866;stroke-dasharray:none"

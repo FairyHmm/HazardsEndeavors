@@ -13,21 +13,25 @@
   --card: #ffffff;
   --fade: #01222d;
   --empty: #00000000;
-  --nav-bkg: #43026e;
-  --nav-fg: #c977ff;
-  --nav-emp: #9a15f3;
-  --fire-bkg: #471313;
-  --fire-fg: #ff4444;
-  --fire-emp: #ff1c1c;
-  --water-bkg: #152557;
-  --water-fg: #5881fa;
-  --water-emp: #2b60ff;
-  --air-bkg: #19493c;
-  --air-fg: #7df8d5;
-  --air-emp: #32be96;
-  --earth-bkg: #382416;
-  --earth-fg: #eca572;
-  --earth-emp: #f58434;
+
+  --nav-bkg: hsl(276, 90%, 25%);
+  --nav-fg: hsl(276, 90%, 75%);
+  --nav-emp: hsl(276, 90%, 50%);
+  --fire-bkg: hsl(0, 100%, 25%);
+  --fire-fg: hsl(0, 100%, 75%);
+  --fire-emp: hsl(0, 100%, 50%);
+  --water-bkg: hsl(210, 100%, 25%);
+  --water-fg: hsl(210, 100%, 75%);
+  --water-emp: hsl(210, 100%, 50%);
+  --air-bkg: hsl(159, 100%, 25%);
+  --air-fg: hsl(159, 100%, 75%);
+  --air-emp: hsl(159, 100%, 50%);
+  --earth-bkg: hsl(25, 76%, 25%);
+  --earth-fg: hsl(25, 76%, 75%);
+  --earth-emp: hsl(25, 76%, 50%);
+  --human-bkg: hsl(73, 93%, 25%);
+  --human-fg: hsl(73, 93%, 75%);
+  --human-emp: hsl(73, 93%, 50%);
 }
 
 * {

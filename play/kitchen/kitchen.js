@@ -15,44 +15,20 @@ document.body.appendChild(app.view);
 const main = new PIXI.Container();
 app.stage.addChild(main);
 
-const h1S = new TextS({
-  fontFamily: "Helvetica",
-  fontSize: 35,
-  lineHeight: 36,
-  align: "center",
-  fill: "#ffffff",
-  stroke: "#000000",
-  strokeThickness: 5,
-  lineJoin: "round",
-  wordWrap: true,
-  wordWrapWidth: app.screen.width / 1.5,
-});
-
-const h1FairyS = new TextS({
-  fontFamily: "Helvetica",
-  fontSize: 35,
-  lineHeight: 36,
-  align: "center",
-  fill: "#cba6f7",
-  stroke: "#000000",
-  strokeThickness: 5,
-  lineJoin: "round",
-  wordWrap: true,
-  wordWrapWidth: app.screen.width / 1.5,
-});
-
-const h1FireS = new TextS({
-  fontFamily: "Helvetica",
-  fontSize: 35,
-  lineHeight: 36,
-  align: "center",
-  fill: "#ff4444",
-  stroke: "#000000",
-  strokeThickness: 5,
-  lineJoin: "round",
-  wordWrap: true,
-  wordWrapWidth: app.screen.width / 1.5,
-});
+function h1S(fillColor = "#ffffff") {
+  return new TextS({
+    fontFamily: "Helvetica",
+    fontSize: 35,
+    lineHeight: 36,
+    align: "center",
+    fill: fillColor,
+    stroke: "#000000",
+    strokeThickness: 5,
+    lineJoin: "round",
+    wordWrap: true,
+    wordWrapWidth: app.screen.width / 1.5,
+  });
+}
 
 const h2S = new TextS({
   fontFamily: "Helvetica",
@@ -164,17 +140,21 @@ function toggleShake(object) {
   }
 }
 
-let elapsedTimeMove = 0;
-function move(object, targetX, targetY, duration, delta) {
-  elapsedTimeMove += delta;
-  const progress = Math.min(elapsedTimeMove / duration, 1);
-  const newX = object.position.x + (targetX - object.position.x) * progress;
-  const newY = object.position.y + (targetY - object.position.y) * progress;
-  object.position.set(newX, newY);
-  if (elapsedTimeMove >= duration) {
-    app.ticker.remove(move);
-    elapsedTimeMove = 0;
-    return;
+function move(object, targetX, targetY, duration) {
+  let startTime = null;
+  requestAnimationFrame(animate);
+  function animate(currentTime) {
+    if (!startTime) {
+      startTime = currentTime;
+    }
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const newX = object.position.x + (targetX - object.position.x) * progress;
+    const newY = object.position.y + (targetY - object.position.y) * progress;
+    object.position.set(newX, newY);
+    if (elapsed < duration) {
+      requestAnimationFrame(animate);
+    }
   }
 }
 
@@ -395,7 +375,7 @@ function timeout() {
   }, 10);
 }
 
-const welcomeText = new Text("Matthew, living in his home, is cooking breakfast.", h1S);
+const welcomeText = new Text("Matthew, living in his home, is cooking breakfast.", h1S());
 function welcomeF() {
   setText(welcomeText);
   app.stage.addChild(welcomeText);
@@ -404,9 +384,9 @@ function welcomeF() {
 
 const kitchen = new Sprite(Texture("/assets/games/kitchen/kitchen.svg"));
 const pan = new Sprite(Texture("/assets/games/kitchen/pan.svg"));
-const firepan = new Sprite(Texture("/assets/games/kitchen/firepan.svg"));
-const phoneSide = new Sprite(Texture("/assets/games/misc/phoneside.svg"));
-const matt = new Sprite(Texture("/assets/peeps/matthew/default.svg"));
+const firepan = new Sprite(Texture("/assets/games/fire/firepan.svg"));
+const phoneSide = new Sprite(Texture("/assets/games/phone/phoneside.svg"));
+const matt = new Sprite(Texture("/assets/peeps/matthew/matt.svg"));
 function kitchenF() {
   kitchen.anchor.set(0.5);
   matt.anchor.set(0.5);
@@ -417,18 +397,13 @@ function kitchenF() {
   kitchen.y = app.screen.height / 2 - 20;
   matt.x = kitchen.x - 140;
   matt.y = kitchen.y + 20;
-  matt.scale.x = -0.75;
   pan.x = kitchen.x - 195;
   pan.y = kitchen.y + 23;
   firepan.x = pan.x - 13;
   firepan.y = pan.y + 10;
   phoneSide.x = kitchen.x + 185;
   phoneSide.y = kitchen.y + 65;
-  kitchen.scale.set(0.75, 0.75);
-  matt.scale.set(-0.75, 0.75);
-  pan.scale.set(0.75, 0.75);
-  firepan.scale.set(0.45, 0.45);
-  phoneSide.scale.set(0.2, 0.2);
+  matt.scale.x = -1;
   kitchen.alpha = 0;
   matt.alpha = 0;
   pan.alpha = 0;
@@ -446,7 +421,7 @@ function kitchenF() {
   showSprite(firepan);
 }
 
-const phoneCallText = new Text("Suddenly, his phone rings.", h1S);
+const phoneCallText = new Text("Suddenly, his phone rings.", h1S());
 function phoneCallF() {
   hideSprite(welcomeText);
   setText(phoneCallText);
@@ -460,20 +435,20 @@ function phoneRingsF() {
 
 function mattTurnsF() {
   hideSprite(matt);
-  matt.scale.set(0.75, 0.75);
+  matt.scale.x = 1;
   matt.x = kitchen.x - 120;
   setTimeout(() => {
     showSprite(matt);
   }, 200);
 }
 
-const goText = new Text("He goes to get it.", h1S);
+const goText = new Text("He goes to get it.", h1S());
 function mattGoesF() {
   hideSprite(phoneCallText);
   setText(goText);
   app.stage.addChild(goText);
   showSprite(goText);
-  app.ticker.add((delta) => move(matt, kitchen.x + 155, matt.y, 1000, delta));
+  move(matt, kitchen.x + 155, matt.y, 1000);
 }
 
 const anniePhone = new Sprite(Texture("/assets/games/misc/phoneannie.svg"));
@@ -492,17 +467,17 @@ function phoneAnnieF() {
   app.stage.addChild(anniePhone);
   showSprite(blackLayer);
   showSprite(anniePhone);
-  app.ticker.add((delta) => move(anniePhone, anniePhone.x, app.screen.height / 2, 1000, delta));
+  move(anniePhone, anniePhone.x, app.screen.height / 2, 1000);
 }
 
 const mattCall = new Sprite(Texture("/assets/peeps/matthew/phone.svg"));
-const annieCallText = new Text("They're chatting!", h1S);
+const annieCallText = new Text("They're chatting!", h1S());
 function phoneAnnieAcceptF() {
   hideSprite(phoneCallText);
   hideSprite(blackLayer);
   hideSprite(matt);
   hideSprite(phoneSide);
-  app.ticker.add((delta) => move(anniePhone, anniePhone.x, app.screen.height * 2, 1000, delta));
+  move(anniePhone, anniePhone.x, app.screen.height * 2, 1000);
   setTimeout(() => {
     hideSprite(anniePhone);
   }, 1000);
@@ -511,16 +486,16 @@ function phoneAnnieAcceptF() {
   mattCall.x = matt.x;
   mattCall.y = matt.y;
   mattCall.alpha = 0;
-  mattCall.scale.set(-0.75, 0.75);
+  mattCall.scale.x = -1;
   app.stage.addChild(mattCall);
   app.stage.addChild(annieCallText);
   showSprite(annieCallText);
   showSprite(mattCall);
 }
 
-const panFire = new Sprite(Texture("/assets/games/kitchen/fire1.svg"));
-const smoke1 = new Sprite(Texture("/assets/games/kitchen/smoke1.svg"));
-const fireStartText = new Text("Oh no! He forgot to turn off the stove.", h1S);
+const panFire = new Sprite(Texture("/assets/games/fire/fire1.svg"));
+const smoke1 = new Sprite(Texture("/assets/games/fire/smoke1.svg"));
+const fireStartText = new Text("Oh no! He forgot to turn off the stove.", h1S());
 function panFireF() {
   hideSprite(annieCallText);
   setText(fireStartText);
@@ -530,8 +505,6 @@ function panFireF() {
   panFire.y = pan.y - 40;
   smoke1.x = pan.x - 10;
   smoke1.y = pan.y - 85;
-  panFire.scale.set(0.4, 0.4);
-  smoke1.scale.set(0.7, 0.7);
   panFire.alpha = 0;
   smoke1.alpha = 0;
   app.stage.addChild(panFire);
@@ -543,7 +516,7 @@ function panFireF() {
 }
 
 const mattPanic = new Sprite(Texture("/assets/peeps/matthew/panic.svg"));
-const onFireText = new Text("The pan is on fire!", h1S);
+const onFireText = new Text("The pan is on fire!", h1S());
 function mattPanicF() {
   hideSprite(mattCall);
   hideSprite(fireStartText);
@@ -552,14 +525,14 @@ function mattPanicF() {
   mattPanic.x = mattCall.x;
   mattPanic.y = mattCall.y;
   mattPanic.alpha = 0;
-  mattPanic.scale.set(-0.75, 0.75);
+  mattPanic.scale.x = -1;
   app.stage.addChild(mattPanic);
   app.stage.addChild(onFireText);
   showSprite(mattPanic);
   showSprite(onFireText);
 }
 
-const whatToDoText = new Text("What should he do?", h1S);
+const whatToDoText = new Text("What should he do?", h1S());
 const turnOffStove = new PIXI.Container();
 const turnOffStoveButton = new Button();
 const pourWater = new PIXI.Container();
@@ -592,7 +565,6 @@ function whatToDoF() {
   stove.anchor.set(0, 0.5);
   stove.x = 20;
   stove.y = 40;
-  stove.scale.set(0.3, 0.3);
   showSprite(turnOffStove);
 
   pourWater.x = (app.screen.width * 3) / 4 - 150;
@@ -601,7 +573,6 @@ function whatToDoF() {
   app.stage.addChild(pourWater);
   pourWaterButton.interactive = true;
   pourWaterButton.buttonMode = true;
-  pourWater.addChild(pourWaterButton);
   pourWater.addChild(pourWaterButton);
   pourWaterButton.on("click", () => {
     timeout();
@@ -617,7 +588,6 @@ function whatToDoF() {
   cupOfWater.anchor.set(0, 0.5);
   cupOfWater.x = 20;
   cupOfWater.y = 40;
-  cupOfWater.scale.set(0.3, 0.3);
   showSprite(pourWater);
 }
 
@@ -629,7 +599,7 @@ function turnOffStoveF() {
   hideSprite(pourWater);
   turnOffStoveButton.interactive = false;
   pourWaterButton.interactive = false;
-  app.ticker.add((delta) => move(mattPanic, kitchen.x - 100, mattPanic.y, 1000, delta));
+  move(mattPanic, kitchen.x - 100, mattPanic.y, 1000);
 }
 
 function turnOffStove2F() {
@@ -637,7 +607,7 @@ function turnOffStove2F() {
   hideSprite(firepan);
 }
 
-const stoveWhatToDoText = new Text("What's next?", h1S);
+const stoveWhatToDoText = new Text("What's next?", h1S());
 const bringOutside = new PIXI.Container();
 const bringOutsideButton = new Button();
 const useSalt = new PIXI.Container();
@@ -665,12 +635,12 @@ function stoveWhatToDoF() {
   bringOutsideText.anchor.set(1, 0.5);
   bringOutsideText.x = 280;
   bringOutsideText.y = 40;
-  const stove = new Sprite(Texture("/assets/games/kitchen/pan.svg"));
-  bringOutside.addChild(stove);
-  stove.anchor.set(0, 0.5);
-  stove.x = 20;
-  stove.y = 40;
-  stove.scale.set(0.3, 0.3);
+  const pan = new Sprite(Texture("/assets/games/kitchen/pan.svg"));
+  bringOutside.addChild(pan);
+  pan.anchor.set(0, 0.5);
+  pan.x = 20;
+  pan.y = 40;
+  pan.scale.set(0.8, 0.8);
   showSprite(bringOutside);
 
   useSalt.x = (app.screen.width * 3) / 4 - 150;
@@ -690,17 +660,16 @@ function stoveWhatToDoF() {
   useSaltText.anchor.set(1, 0.5);
   useSaltText.x = 280;
   useSaltText.y = 40;
-  const cupOfWater = new Sprite(Texture("/assets/games/kitchen/saltpot.svg"));
-  useSalt.addChild(cupOfWater);
-  cupOfWater.anchor.set(0, 0.5);
-  cupOfWater.x = 20;
-  cupOfWater.y = 40;
-  cupOfWater.scale.set(0.3, 0.3);
+  const saltPot = new Sprite(Texture("/assets/games/kitchen/saltpot.svg"));
+  useSalt.addChild(saltPot);
+  saltPot.anchor.set(0, 0.5);
+  saltPot.x = 20;
+  saltPot.y = 40;
   showSprite(useSalt);
 }
 
 const mattPanic3 = new Sprite(Texture("/assets/peeps/matthew/panic.svg"));
-const panFire2 = new Sprite(Texture("/assets/games/kitchen/fire1.svg"));
+const panFire2 = new Sprite(Texture("/assets/games/fire/fire1.svg"));
 const pan2 = new Sprite(Texture("/assets/games/kitchen/pan.svg"));
 const grass = new Sprite(Texture("/assets/games/kitchen/grass.svg"));
 function bringOutsideF() {
@@ -728,9 +697,8 @@ function bringOutsideF() {
   pan2.alpha = 0;
   mattPanic3.alpha = 0;
   grass.alpha = 0;
-  mattPanic3.scale.set(0.75, 0.75);
-  pan2.scale.set(-0.75, 0.75);
-  panFire2.scale.set(-0.4, 0.4);
+  pan2.scale.x = -1;
+  panFire2.scale.x = -1;
   app.stage.addChild(grass);
   app.stage.addChild(mattPanic3);
   app.stage.addChild(pan2);
@@ -738,7 +706,7 @@ function bringOutsideF() {
   showSprite(mattPanic3);
   showSprite(pan2);
   showSprite(panFire2);
-  app.ticker.add((delta) => move(kitchen, -app.screen.width / 2, kitchen.y, 10000, delta));
+  move(kitchen, -app.screen.width / 2, kitchen.y, 10000);
 }
 
 const mattTrip = new Sprite(Texture("/assets/peeps/matthew/trip.svg"));
@@ -752,21 +720,20 @@ function outsideF() {
   mattTrip.y = mattPanic3.y;
   grass.alpha = 0;
   mattTrip.alpha = 0;
-  mattTrip.scale.set(0.75, 0.75);
   app.stage.addChild(mattTrip);
   showSprite(grass);
-  app.ticker.add((delta) => move(grass, app.screen.width / 2, kitchen.y + 100, 10000, delta));
+  move(grass, app.screen.width / 2, kitchen.y + 100, 10000);
   setTimeout(() => {
     timeout();
     hideSprite(mattPanic3);
     showSprite(mattTrip);
-    app.ticker.add((delta) => move(pan2, (app.screen.width * 2) / 3, grass.y, 10000, delta));
-    app.ticker.add((delta) => move(panFire2, (app.screen.width * 2) / 3 + 15, grass.y - 40, 10000, delta));
-  }, 500);
+    move(pan2, (app.screen.width * 2) / 3, grass.y, 10000);
+    move(panFire2, (app.screen.width * 2) / 3 + 15, grass.y - 40, 10000);
+  }, 1000);
 }
 
-const fireGrass1 = new Sprite(Texture("/assets/games/kitchen/fire1.svg"));
-const fireGrass2 = new Sprite(Texture("/assets/games/kitchen/fire2.svg"));
+const fireGrass1 = new Sprite(Texture("/assets/games/fire/fire1.svg"));
+const fireGrass2 = new Sprite(Texture("/assets/games/fire/fire2.svg"));
 function outsideBurnF() {
   fireGrass1.anchor.set(0.5);
   fireGrass2.anchor.set(0.5);
@@ -776,16 +743,14 @@ function outsideBurnF() {
   fireGrass2.y = grass.y;
   fireGrass1.alpha = 0;
   fireGrass2.alpha = 0;
-  fireGrass1.scale.set(0.75, 0.75);
-  fireGrass2.scale.set(0.75, 0.75);
   app.stage.addChild(fireGrass1);
   app.stage.addChild(fireGrass2);
   showSprite(fireGrass1);
   showSprite(fireGrass2);
 }
 
-const kitchenText = new Text("The Kitchen:", h1S);
-const burnedText = new Text("The Kitchen:\nBurned", h1S);
+const kitchenText = new Text("The Kitchen:", h1S());
+const burnedText = new Text("The Kitchen:\nBurned", h1S());
 function endingBurnF() {
   setText(kitchenText);
   setText(burnedText);
@@ -828,10 +793,10 @@ function useSaltF() {
   }, 50);;
 }
 
-const useSaltText = new Text("Salt doesn't burn, and lower the temperature of the fire.", h1FairyS);
+const useSaltText = new Text("Salt doesn't burn, and lowers the temperature of the fire.", h1S("#cba6f7"));
 const vtl = new Sprite(Texture("/assets/people/vtl.svg"));
 const saltPile2 = new Sprite(Texture("/assets/games/kitchen/saltpile.svg"));
-const fireSalt = new Sprite(Texture("/assets/games/kitchen/fire2.svg"));
+const fireSalt = new Sprite(Texture("/assets/games/fire/fire2.svg"));
 function useSaltExplainF() {
   app.stage.removeChild(blackLayer);
   app.stage.addChild(blackLayer);
@@ -858,15 +823,15 @@ function useSaltExplainF() {
   showSprite(vtl);
   setTimeout(() => {
     showSprite(saltPile2);
-  }, 100);
+  }, 250);
   showSprite(fireSalt);
   setTimeout(() => {
     hideSprite(fireSalt);
-  }, 200);
+  }, 500);
 }
 
-const matt2 = new Sprite(Texture("/assets/peeps/matthew/default.svg"));
-const extinguisedText = new Text("The fire went out!", h1S);
+const matt2 = new Sprite(Texture("/assets/peeps/matthew/matt.svg"));
+const extinguisedText = new Text("The fire went out!", h1S());
 function extinguisedF() {
   hideSprite(blackLayer);
   hideSprite(useSaltText);
@@ -880,14 +845,14 @@ function extinguisedF() {
   matt2.anchor.set(0.5);
   matt2.x = mattPanic.x;
   matt2.y = mattPanic.y;
-  matt2.scale.set(-0.75, 0.75);
+  matt2.scale.x = -1;
   matt2.alpha = 0;
   app.stage.addChild(matt2);
   showSprite(matt2);
   showSprite(extinguisedText);
 }
 
-const extinguised2Text = new Text("The Kitchen:\nExtinguised", h1S);
+const extinguised2Text = new Text("The Kitchen:\nExtinguised", h1S());
 function endingExtinguisedF() {
   setText(kitchenText);
   setText(extinguised2Text);
@@ -906,7 +871,7 @@ function pourWaterF() {
   hideSprite(pourWater);
   turnOffStoveButton.interactive = false;
   pourWaterButton.interactive = false;
-  app.ticker.add((delta) => move(mattPanic, kitchen.x - 50, mattPanic.y, 1000, delta));
+  move(mattPanic, kitchen.x - 50, mattPanic.y, 1000);
 }
 
 const cupOfWaterPour = new Sprite(Texture("/assets/games/kitchen/waterpour.svg"));
@@ -915,14 +880,13 @@ function pourWater2F() {
   cupOfWaterPour.alpha = 0;
   cupOfWaterPour.x = pan.x + 15;
   cupOfWaterPour.y = pan.y - 20;
-  cupOfWaterPour.scale.set(0.3, 0.3);
   app.stage.addChild(cupOfWaterPour);
   showSprite(cupOfWaterPour);
 }
 
-const overflowText = new Text("The oil overflows!", h1S);
+const overflowText = new Text("The oil overflows!", h1S());
 const oilWaterPatch = new Sprite(Texture("/assets/games/kitchen/oilwaterpatch.svg"));
-const oilFire = new Sprite(Texture("/assets/games/kitchen/fire2.svg"));
+const oilFire = new Sprite(Texture("/assets/games/fire/fire2.svg"));
 function oilOverflow2F() {
   hideSprite(cupOfWaterPour);
   setText(overflowText);
@@ -944,7 +908,7 @@ function oilOverflow2F() {
   showSprite(oilFire);
 }
 
-const oilFloatText = new Text("Oil floats on water due to its density.", h1FairyS);
+const oilFloatText = new Text("Oil floats on water due to its density.", h1S("#cba6f7"));
 const fairy = new Sprite(Texture("/assets/people/fairy.svg"));
 const oilWaterGlass = new Sprite(Texture("/assets/games/kitchen/oilwater.svg"));
 function oilExplainF() {
@@ -968,10 +932,10 @@ function oilExplainF() {
   showSprite(oilWaterGlass);
 }
 
-const waterOnOilText = new Text("When adding water to burning oil, the oil stays afloat, and the fire is not extinguised.", h1FairyS);
+const waterOnOilText = new Text("When adding water to burning oil, the oil stays afloat, and the fire is not extinguised.", h1S("#cba6f7"));
 const waterPatch = new Sprite(Texture("/assets/games/kitchen/waterpatch.svg"));
 const oilPatch = new Sprite(Texture("/assets/games/kitchen/oilpatch.svg"));
-const fireOilWater = new Sprite(Texture("/assets/games/kitchen/fire1.svg"));
+const fireOilWater = new Sprite(Texture("/assets/games/fire/fire1.svg"));
 function oilExplain2F() {
   hideSprite(oilFloatText);
   hideSprite(oilWaterGlass);
@@ -989,7 +953,6 @@ function oilExplain2F() {
   fireOilWater.alpha = 0;
   waterPatch.alpha = 0;
   oilPatch.alpha = 0;
-  fireOilWater.scale.set(0.5, 0.5);
   waterPatch.scale.set(2, 2);
   app.stage.addChild(waterOnOilText);
   app.stage.addChild(waterPatch);
@@ -1005,7 +968,7 @@ function oilExplain2F() {
   showSprite(fireOilWater);
 }
 
-const whoToCallText = new Text("Who should he call?", h1S);
+const whoToCallText = new Text("Who should he call?", h1S());
 const callFirefighter = new PIXI.Container();
 const callFirefighterButton = new Button();
 const callMom = new PIXI.Container();
@@ -1062,12 +1025,12 @@ function callWhoF() {
   callMomText.anchor.set(1, 0.5);
   callMomText.x = 280;
   callMomText.y = 40;
-  const Mom = new Sprite(Texture("/assets/peeps/sarah.svg"));
-  callMom.addChild(Mom);
-  Mom.anchor.set(0, 0.5);
-  Mom.x = 20;
-  Mom.y = 40;
-  Mom.scale.set(0.3, 0.3);
+  const mom = new Sprite(Texture("/assets/peeps/sarah.svg"));
+  callMom.addChild(mom);
+  mom.anchor.set(0, 0.5);
+  mom.x = 20;
+  mom.y = 40;
+  mom.scale.set(0.3, 0.3);
   showSprite(callMom);
   timeout();
 }
@@ -1079,7 +1042,7 @@ function mattCallPanicF() {
   mattCallPanic.x = mattPanic.x;
   mattCallPanic.y = mattPanic.y;
   mattCallPanic.alpha = 0;
-  mattCallPanic.scale.set(-0.75, 0.75);
+  mattCallPanic.scale.x = -1;
   app.stage.addChild(mattCallPanic);
   showSprite(mattCallPanic);
 
@@ -1103,10 +1066,10 @@ function callMomF() {
   app.stage.addChild(momPhone);
   showSprite(blackLayer);
   showSprite(momPhone);
-  app.ticker.add((delta) => move(momPhone, momPhone.x, app.screen.height / 2, 1000, delta));
+  move(momPhone, momPhone.x, app.screen.height / 2, 1000);
 }
 
-const momText = new Text("You stupid. Call the firefighters", h1FairyS);
+const momText = new Text("You stupid. Call the firefighters", h1S("#cba6f7"));
 function callMom2F() {
   setText(momText);
   app.stage.addChild(momText);
@@ -1114,13 +1077,11 @@ function callMom2F() {
 }
 
 function callMom3F() {
-  app.ticker.add((delta) => move(momPhone, momPhone.x, app.screen.height * 2, 1000, delta));
-  setTimeout(() => {
-    hideSprite(blackLayer);
-    hideSprite(momPhone);
-    hideSprite(momText);
-    callWhoF();
-  }, 1000);
+  move(momPhone, momPhone.x, app.screen.height * 2, 1000);
+  hideSprite(blackLayer);
+  hideSprite(momPhone);
+  hideSprite(momText);
+  callWhoF();
 }
 
 const firefighterPhone = new Sprite(Texture("/assets/games/misc/phonefirefighter.svg"));
@@ -1137,10 +1098,10 @@ function callFirefighterF() {
   app.stage.addChild(firefighterPhone);
   showSprite(blackLayer);
   showSprite(firefighterPhone);
-  app.ticker.add((delta) => move(firefighterPhone, firefighterPhone.x, app.screen.height / 2, 1000, delta));
+  move(firefighterPhone, firefighterPhone.x, app.screen.height / 2, 1000);
 }
 
-const firefighterText = new Text("We'll be there!", h1FireS);
+const firefighterText = new Text("We'll be there!", h1S("#ff4444"));
 function callFirefighter2F() {
   setText(firefighterText);
   app.stage.addChild(firefighterText);
@@ -1149,53 +1110,52 @@ function callFirefighter2F() {
 
 const firefighter = new Sprite(Texture("/assets/peeps/firefighter/extinguish.svg"));
 const house = new Sprite(Texture("/assets/games/misc/house.svg"));
-const fireHouse = new Sprite(Texture("/assets/games/kitchen/fire1.svg"));
+const fireHouse = new Sprite(Texture("/assets/games/fire/fire1.svg"));
 const mattPanic2 = new Sprite(Texture("/assets/peeps/matthew/panic.svg"));
 function endingRescuedF() {
-  app.ticker.add((delta) => move(firefighterPhone, firefighterPhone.x, app.screen.height * 2, 1000, delta));
-  setTimeout(() => {
-    hideSprite(kitchen);
-    hideSprite(pan);
-    hideSprite(firepan);
-    hideSprite(oilWaterPatch);
-    hideSprite(waterPatch);
-    hideSprite(oilFire);
-    hideSprite(firefighterPhone);
-    hideSprite(blackLayer);
-    hideSprite(panFire);
-    hideSprite(smoke1);
-    hideSprite(mattCallPanic);
-    hideSprite(firefighterText);
-    firefighter.anchor.set(0.5);
-    house.anchor.set(0.5);
-    fireHouse.anchor.set(0.5);
-    mattPanic2.anchor.set(0.5);
-    mattPanic2.x = (app.screen.width * 3) / 4;
-    mattPanic2.y = app.screen.height / 2;
-    firefighter.x = app.screen.width / 2;
-    firefighter.y = app.screen.height / 2;
-    house.x = app.screen.width / 5;
-    house.y = app.screen.height / 2;
-    fireHouse.x = app.screen.width / 5;
-    fireHouse.y = app.screen.height / 2 - house.height / 2;
-    firefighter.scale.set(-0.75, 0.75);
-    mattPanic2.scale.set(-0.75, 0.75);
-    firefighter.alpha = 0;
-    mattPanic2.alpha = 0;
-    house.alpha = 0;
-    fireHouse.alpha = 0;
-    app.stage.addChild(firefighter);
-    app.stage.addChild(house);
-    app.stage.addChild(fireHouse);
-    app.stage.addChild(mattPanic2);
-    showSprite(mattPanic2);
-    showSprite(firefighter);
-    showSprite(house);
-    showSprite(fireHouse);
-  }, 1000);
+  move(firefighterPhone, firefighterPhone.x, app.screen.height * 2, 1000);
+  hideSprite(kitchen);
+  hideSprite(pan);
+  hideSprite(firepan);
+  hideSprite(oilWaterPatch);
+  hideSprite(waterPatch);
+  hideSprite(oilFire);
+  hideSprite(firefighterPhone);
+  hideSprite(blackLayer);
+  hideSprite(panFire);
+  hideSprite(smoke1);
+  hideSprite(mattCallPanic);
+  hideSprite(firefighterText);
+  firefighter.anchor.set(0.5);
+  house.anchor.set(0.5);
+  fireHouse.anchor.set(0.5);
+  mattPanic2.anchor.set(0.5);
+  mattPanic2.x = (app.screen.width * 3) / 4;
+  mattPanic2.y = app.screen.height / 2;
+  firefighter.x = app.screen.width / 2;
+  firefighter.y = app.screen.height / 2;
+  house.x = app.screen.width / 5;
+  house.y = app.screen.height / 2;
+  fireHouse.x = app.screen.width / 5;
+  fireHouse.y = app.screen.height / 2 - house.height / 2;
+  firefighter.scale.x = -1;
+  mattPanic2.scale.x = -1;
+  fireHouse.scale.set(2, 2);
+  firefighter.alpha = 0;
+  mattPanic2.alpha = 0;
+  house.alpha = 0;
+  fireHouse.alpha = 0;
+  app.stage.addChild(firefighter);
+  app.stage.addChild(house);
+  app.stage.addChild(fireHouse);
+  app.stage.addChild(mattPanic2);
+  showSprite(mattPanic2);
+  showSprite(firefighter);
+  showSprite(house);
+  showSprite(fireHouse);
 }
 
-const rescuedText = new Text("The Kitchen:\nRescued", h1S);
+const rescuedText = new Text("The Kitchen:\nRescued", h1S());
 function endingRescued2F() {
   setText(kitchenText);
   setText(rescuedText);
@@ -1207,7 +1167,7 @@ function endingRescued2F() {
   }, 500);
 }
 
-const copiedText = new Text("Copied!", h1S);
+const copiedText = new Text("Copied!", h1S());
 const retry = new PIXI.Container();
 const retryButton = new Button();
 const home = new PIXI.Container();

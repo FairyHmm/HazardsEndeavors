@@ -1,0 +1,7 @@
+@import "/css/article.css";
+
+:root {
+    --accent-bkg: var(--human-bkg);
+    --accent-fg: var(--human-fg);
+    --accent-emp: var(--human-emp);
+}
