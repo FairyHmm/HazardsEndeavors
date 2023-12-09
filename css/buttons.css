@@ -26,13 +26,10 @@
   min-width: 120px;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: var(--fg-hover);
   color: var(--bkg);
-}
-
-.btn {
-  text-decoration: none;
 }

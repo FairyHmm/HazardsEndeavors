@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quizzes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/learn/quiz/quiz.css" />
+    <script src="/js/core.js"></script>
+    <script src="/learn/quiz/quiz.js"></script>
+</head>
+
+<body>
+    <noscript>
+        <p class="noscript">
+            JavaScript is not enabled. Some functions may not work properly.
+        </p>
+    </noscript>
+    <!--Nav bar-->
+    <div class="nav">
+        <div class="box"></div>
+        <input type="checkbox" id="openSideMenu" class="openSideMenu" onclick="openNav()" />
+        <label for="openSideMenu" class="menuIconToggle">
+            <div class="hamb-line dia p-1"></div>
+            <div class="hamb-line hor"></div>
+            <div class="hamb-line dia p-2"></div>
+        </label>
+        <div id="mySidenav" class="sidenav">
+            <a id="inactive" href="/">Main</a>
+            <a id="inactive" href="/play">Play</a>
+            <a id="active" href="/learn">Learn</a>
+            <a id="inactive" href="/information">Information</a>
+        </div>
+    </div>
+
+    <div id="quiz-container"></div>
+    <div class="main">
+        <h1>Test what you have learned through quizzes!</h1>
+        <div class="buttons">
+            <button class="btn" onclick="initQuiz()">Start quiz?</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="score-container">
+        <h1>You got<span id="score"></span>correct</h1>
+        <button class="btn" id="share-button">Share</button>
+        <button class="btn" id="retry-button">Retry</button>
+      </div>
+    <form class="quiz" id="quiz-form"></form>
+    <div class="buttons submit">
+        <button class="btn" onclick="calculateScore(event)">Submit</button>
+        <button class="btn" onclick="retryQuiz()">Retry</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+{
+  "quizzes": [
+    {
+      "name": "While cooking, the pan catches fire. You should:",
+      "options": [
+        {
+          "choice": "Turn off the stove and close the lid.",
+          "explanation": "Closing the lid stops oxygen from entering, stopping the fire from being fueled. It also stops the fire from spreading elsewhere.",
+          "score": 1
+        },
+        {
+          "choice": "Use salt to put out fire.",
+          "explanation": "Salt has the ability to absorb heat and reduce the temperature of the fire, but cannot completely extinguish the fire. As such, salt is often used as a temporary measure in the absence of other fire extinguishing agents.",
+          "score": 0.5
+        },
+        {
+          "choice": "Use water to put out fire.",
+          "explanation": "When water comes into contact with burning oil, the water will quickly turn into steam and create pressure, intensify and spread the fire. This may cause an explosion or cause the fire to spread beyond control.",
+          "score": 0
+        },
+        {
+          "choice": "Move the oil pan to another place.",
+          "explanation": "When moving a burning oil pan, flames can erupt and spread quickly, endangering you and those around you. This could lead to fire spread and create an explosion hazard.",
+          "score": 0
+        }
+      ],
+      "elements": ["fire"]
+    },
+    {
+      "name": "You are in a high-rise building, suddenly the fire alarm goes off. You should:",
+      "options": [
+        {
+          "choice": "Use the elevator to get down faster.",
+          "explanation": "Avoid using the elevator in case of fire. The elevator may become stuck or malfunction in an emergency situation.",
+          "score": 0
+        },
+        {
+          "choice": "Run into a room and close the door.",
+          "explanation": "Hiding in a room can leave you trapped in a confined space with no escape route. In a closed room, the oxygen supply can be limited, making it very dangerous.",
+          "score": 0
+        },
+        {
+          "choice": "Move down using staircases.",
+          "explanation": "The firefighters often focuses on firefighting and evacuating people from the lower floors. Moving downstairs helps to get rescue and assistance from the fire department.",
+          "score": 1
+        },
+        {
+          "choice": "Run to the balcony.",
+          "explanation": "You may attract more attention from rescuers, though it is harder to rescue.",
+          "score": 0.5
+        }
+      ],
+      "elements": ["fire"]
+    },
+    {
+      "name": "You are watching TV when suddenly the plug short-circuits and causes a fire. You should:",
+      "options": [
+        {
+          "choice": "Turn off the power and use a fire extinguisher.",
+          "explanation": "Immediately turn off the power source to prevent further electrical short circuits and the risk of fire spreading. You can use a CO2 gas fire extinguisher or fire extinguishing powder.",
+          "score": 1
+        },
+        {
+          "choice": "Leave immediately and call the fire department.",
+          "explanation": "If the situation becomes dangerous and you cannot extinguish the fire, leave the area immediately. Follow the instructions and directions of firefighters and move to a safe location away from the fire hazard.",
+          "score": 1
+        },
+        {
+          "choice": "Use water to put out the fire.",
+          "explanation": "Avoid using water to put out fire in case of fire due to short circuit. Water can increase the risk of reduced resistance and endanger the operator.",
+          "score": 0
+        }
+      ],
+      "elements": ["fire"]
+    },
+    {
+      "name": "You are organising a camp, but the wind makes the fire spread out. You should:",
+      "options": [
+        {
+          "choice": "Evacuate and save yourselves.",
+          "explanation": "Even though you are safe, you may forget that the fire is still there and has the potential to cause a large-scale forest fire",
+          "score": 0.5
+        },
+        {
+          "choice": "Use soil or water sources nearby to put out the fire.",
+          "explanation": "Using soil or water can put out a small fire, but if the fire spreads too quickly, it can be quite difficult to put out the fire and can even cause injury.",
+          "score": 0.5
+        },
+        {
+          "choice": "Call the fire department.",
+          "explanation": "The fire can still spread further but at least you are safe. The firefighter team has the equipment and skills to handle the situation safely and effectively.",
+          "score": 1
+        }
+      ],
+      "elements": ["fire"]
+    },
+    {
+      "name": "You are taking a walk when there are thunder, lightning, strong winds and heavy rain. It seems like a big storm. You should:",
+      "options": [
+        {
+          "choice": "Hide under a large tree.",
+          "explanation": "In stormy weather, strong winds and heavy rain can cause trees to fall. Tall trees can attract lightning during stormy weather. If you hide under a tree, there is a risk of endangering your life.",
+          "score": 0
+        },
+        {
+          "choice": "Run into a convenience store or nearby building.",
+          "explanation": "Buildings can provide safe shelter for you and others during an ongoing storm.",
+          "score": 1
+        },
+        {
+          "choice": "Use an umbrella",
+          "explanation": "While an umbrella keeps you from being wet, using it during a thunderstorm can increase your risk of getting struck by lightning.",
+          "score": 0.5
+        }
+      ],
+      "elements": ["air", "water"]
+    },
+    {
+      "name": "A heavy rain causes flooding where you live. Everything seems to be swept away. You should:",
+      "options": [
+        {
+          "choice": "Try to collect items in the floodwaters.",
+          "explanation": "Water currents can be very strong and dangerous. Trying to collect items could leave you swept away by floodwaters and in danger.",
+          "score": 0
+        },
+        {
+          "choice": "Hide in your room.",
+          "explanation": "Hiding in a room can limit the escape space and even get stuck in there. In case of strong floods, it can cause landslides or collapse.",
+          "score": 0
+        },
+        {
+          "choice": "Move to the highest place.",
+          "explanation": "Moving to the highest possible place can help you stay away from the risk of being swept away and better observe the situation.",
+          "score": 1
+        }
+      ],
+      "elements": ["water"]
+    },
+    {
+      "name": "Your close friend whom you just met the previous day is infected with an infectious disease. You should:",
+      "options": [
+        {
+          "choice": "Go to a medical center.",
+          "explanation": "Medical centers can assess exposure risks and provide specific guidance on post-exposure prevention and management measures. They may ask you to undergo testing or health monitoring to ensure the safety of you and the community.",
+          "score": 1
+        },
+        {
+          "choice": "Self-isolate at home.",
+          "explanation": "Self-isolation at home will help reduce the spread. However, you will not have much information about the disease you have been exposed to and how to deal with it when it occurs.",
+          "score": 0.5
+        },
+        {
+          "choice": "It's okay because you don't have any symptoms.",
+          "explanation": "Some infectious diseases take a certain amount of time to incubate and develop. Just because you don't have any symptoms yet doesn't mean you are not infected.",
+          "score": 0
+        }
+      ],
+      "elements": ["human", "air"]
+    },
+    {
+      "name": "You discover a group of students spaying graffiti on the teacher's car. You should:",
+      "options": [
+        {
+          "choice": "Deal with them yourself.",
+          "explanation": "Handling a group of students on your own can lead to conflicts and this can be dangerous for you when you have to confront many people at the same time.",
+          "score": 0
+        },
+        {
+          "choice": "Shout loudly for everyone to know.",
+          "explanation": "Yelling loudly can increase the risk of conflict with that group of students and is dangerous for you when you become their target.",
+          "score": 0
+        },
+        {
+          "choice": "Report to teacher.",
+          "explanation": "The teacher can take disciplinary measures to deal with this problem and you will not need to appear.",
+          "score": 1
+        },
+        {
+          "choice": "Join them",
+          "explanation": "Engage in bad behaviors may violate laws and school regulations. This can lead to serious consequences such as detentions, expels, or legal penalties.",
+          "score": 0
+        },
+        {
+          "choice": "Go find other students for help to stop them",
+          "explanation": "Although you have additional support to prevent the above action, the act of gathering students to cause fights can negatively affect relationships between students and create unnecessary tension in the classroom.",
+          "score": 0.5
+        }
+      ],
+      "elements": ["human"]
+    },
+    {
+      "name": "You are often teased and even physically attacked by your classmates. You should:",
+      "options": [
+        {
+          "choice": "Resist them",
+          "explanation": "Fighting back on your own when being bullied can be dangerous and unsafe for you. The bully may become more aggressive and create situations of tension and conflict.",
+          "score": 0
+        },
+        {
+          "choice": "Keep quiet because you're afraid your family will be upset.",
+          "explanation": "Keeping silent does not solve the problem of bullying. The bully may continue their bad behavior and hurt you. When things get worse, you may be affected psychologically.",
+          "score": 0
+        },
+        {
+          "choice": "Prank them back.",
+          "explanation": "Playing pranks on a group of bullying students can increase tension and conflict in the situation. This can increase the potential for conflict and is unsafe for everyone.",
+          "score": 0
+        },
+        {
+          "choice": "Seek help from adults.",
+          "explanation": "Adults can help solving the problems by providing cares, supports, and presenting the problems with those in charge.",
+          "score": 1
+        },
+        {
+          "choice": "Share with a friend.",
+          "explanation": "Sharing about being bullied can help you receive support from others. They can provide advice, emotional support, and help you find a solution to the situation. However, there may be others who do not agree, trust or support you, and this can increase stress and emotional trauma.",
+          "score": 0.5
+        }
+      ],
+      "elements": ["fire"]
+    }
+  ]
+}

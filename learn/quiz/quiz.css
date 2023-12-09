@@ -1,0 +1,144 @@
+@import "/css/core.css";
+
+.main .buttons {
+  flex: 1;
+  overflow: hidden;
+}
+
+.quiz {
+  color: var(--txt);
+  font-size: 125%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  max-width: fit;
+  overflow: hidden;
+  display: none;
+  padding: 2em;
+}
+
+form, .submit {
+  display: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label.btn {
+  padding: 0.5em;
+  margin: 2px;
+  font-size: 125%;
+  background-color: var(--bkg);
+  border: 3px solid var(--fg-hover);
+  border-radius: 0.5em;
+  color: var(--fg-hover);
+  transition: 0.5s ease, color 1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  min-width: 120px;
+  align-items: left;
+  justify-content: left;
+  text-decoration: none;
+}
+
+label.btn:hover,
+label.btn:focus,
+input[type="radio"]:checked+label.btn {
+  background-color: var(--fg-hover);
+  color: var(--bkg);
+}
+
+.question {
+  margin: 1em;
+}
+
+.quiz .question .buttons {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.quiz .question .buttons .btn {
+  width: 600px;
+  align-self: flex-start;
+
+}
+
+@media screen and (max-width: 700px) {
+  .quiz .question .buttons .btn {
+    width: 100%;
+  }
+}
+
+.submit {
+  margin-bottom: 5em;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+#score-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  background-color: var(--nav-emp);
+  border-radius: 2em;
+  z-index: 9999;
+}
+
+#score {
+  font-weight: bold;
+}
+
+.correct {
+  background-color: var(--bkg);
+  border: 3px solid lime !important;
+  color: lime !important;
+}
+
+.correct:focus,
+input[type="radio"]:checked+.correct {
+  background-color: lime !important;
+  color: var(--bkg) !important;
+}
+
+.partial {
+  background-color: var(--bkg);
+  border: 3px solid yellow !important;
+  color: yellow !important;
+}
+
+.partial:focus,
+input[type="radio"]:checked+.partial {
+  background-color: yellow !important;
+  color: var(--bkg) !important;
+}
+
+.incorrect {
+  background-color: var(--bkg);
+  border: 3px solid red !important;
+  color: red !important;
+}
+
+.incorrect:focus,
+input[type="radio"]:checked+.incorrect {
+  background-color: red !important;
+  color: var(--bkg) !important;
+}

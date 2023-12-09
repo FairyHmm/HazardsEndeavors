@@ -5,13 +5,11 @@
 
 :root {
   --bkg: #252627;
-  --bkg2: #20232f;
   --fg: #181818;
   --fg-hover: #4cc9f0;
   --fg-selected: #4361ee;
   --txt: #F2EFE9;
   --card: #ffffff;
-  --fade: #01222d;
   --empty: #00000000;
 
   --nav-bkg: hsl(276, 90%, 25%);
