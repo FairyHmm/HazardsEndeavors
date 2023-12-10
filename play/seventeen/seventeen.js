@@ -10,7 +10,8 @@ const tC = "#ffb3b3",
   hCC = "#FF4444",
   hDC = "#00FF00",
   hMC = "#FFFF66",
-  vC = "#3366FF";
+  vC = "#3366FF",
+  fC = "#cba6f7";
 // Create app
 const app = new Application({
   background: "#252627",
@@ -227,10 +228,10 @@ class Button extends PIXI.Container {
   }
 }
 
-let state = "none";
-let ending = "null";
-let canTrigger = true;
-const trigDur = 500;
+var state = "none";
+var ending = "null";
+var canTrigger = true;
+const trigDur = 750;
 
 window.addEventListener("click", function (event) {
   console.log(state);
@@ -414,36 +415,36 @@ window.addEventListener("click", function (event) {
         break;
       }
       case "vtesthelp":  {
-        state = "teachertest1-helped";
-        teacherTest1F();
+        state = "paulinetest1-helped";
+        paulineTest1F();
         break;
       }
       case "vtestnothelp":  {
-        state = "teachertest1-nothelped";
-        teacherTest1F();
+        state = "paulinetest1-nothelped";
+        paulineTest1F();
         break;
       }
-      case "teachertest1-helped":  {
-        state = "teachertest2-helped";
-        teacherTest2F();
+      case "paulinetest1-helped":  {
+        state = "paulinetest2-helped";
+        paulineTest2F();
         break;
       }
-      case "teachertest1-nothelped":  {
-        state = "teachertest2-nothelped";
-        teacherTest2F();
+      case "paulinetest1-nothelped":  {
+        state = "paulinetest2-nothelped";
+        paulineTest2F();
         break;
       }
-      case "teachertest2-helped":  {
-        state = "teachertest3-helped";
-        teacherTest3HelpedF();
+      case "paulinetest2-helped":  {
+        state = "paulinetest3-helped";
+        paulineTest3HelpedF();
         break;
       }
-      case "teachertest2-nothelped":  {
-        state = "teachertest3-nothelped";
-        teacherTest3NotHelpedF();
+      case "paulinetest2-nothelped":  {
+        state = "paulinetest3-nothelped";
+        paulineTest3NotHelpedF();
         break;
       }
-      case "teachertest3-helped":  {
+      case "paulinetest3-helped":  {
         state = "heathersacceptveronica1";
         heathersAcceptVeronica1F();
         break;
@@ -463,7 +464,7 @@ window.addEventListener("click", function (event) {
         chapterIIF();
         break;
       }
-      case "teachertest3-nothelped":  {
+      case "paulinetest3-nothelped":  {
         state = "heathersdislikeveronica1";
         heathersDislikeVeronica1F();
         break;
@@ -479,11 +480,11 @@ window.addEventListener("click", function (event) {
         break;
       }
       case "heathersdislikeveronica3":  {
-        state = "heathersGoPickOnV";
+        state = "heathersgopickonv";
         heathersGoPickOnVF();
         break;
       }
-      case "heathersGoPickOnV":  {
+      case "heathersgopickonv":  {
         state = "vbullied-pre";
         chapterIIF();
         break;
@@ -496,6 +497,193 @@ window.addEventListener("click", function (event) {
       case "vfindheathersbully":  {
         state = "vfindheathersbullychoose";
         vFindHeathersBullyChooseF();
+        break;
+      }
+      case "vjoinbully":  {
+        state = "vjoinbullyc";
+        vJoinBullyCF();
+        break;
+      }
+      case "vjoinbullyc":  {
+        state = "vjoinbullyd";
+        vJoinBullyDF();
+        break;
+      }
+      case "vjoinbullyd":  {
+        state = "vjoinbullym";
+        vJoinBullyMF();
+        break;
+      }
+      case "vjoinbullym":  {
+        state = "veronicabully1";
+        veronicaBully1F();
+        break;
+      }
+      case "veronicabully1":  {
+        state = "veronicabully2";
+        veronicaBully2F();
+        break;
+      }
+      case "veronicabully2":  {
+        state = "veronicabully3";
+        veronicaBully3F();
+        break;
+      }
+      case "veronicabully3":  {
+        state = "bullyendingexplain";
+        bullyEndingExplainF();
+        break;
+      }
+      case "bullyendingexplain":  {
+        state = "ending1";
+        ending = "The bully";
+        ending1F();
+        break;
+      }
+      case "vstopbully":  {
+        state = "vstopbullyC";
+        vStopBullyCF();
+        break;
+      }
+      case "vstopbullyC":  {
+        state = "vstopbullyD";
+        vStopBullyDF();
+        break;
+      }
+      case "vstopbullyD":  {
+        state = "vstopbullyM";
+        vStopBullyMF();
+        break;
+      }
+      case "vreporttopauline":  {
+        state = "vreporttopauline2";
+        reportToPauline2F();
+        break;
+      }
+      case "vreporttopauline2":  {
+        state = "vreporttopauline3";
+        reportToPauline3F();
+        break;
+      }
+      case "vignoreit":  {
+        state = "vignoreit2";
+        ignoreIt2F();
+        break;
+      }
+      case "vignoreit2":  {
+        state = "vignoreit3";
+        ignoreIt3F();
+        break;
+      }
+      case "vignoreit3":  {
+        state = "vignoreit4";
+        ignoreIt4F();
+        break;
+      }
+      case "vbullied-pre":
+      case "vstopbullyM":
+      case "vreporttopauline3":
+      case "vignoreit4": {
+        state = "vcontinuebeingbullied";
+        vContinueBeingBulliedF();
+        break;
+      }
+      case "vcontinuebeingbullied":  {
+        state = "vcontinuebulliedchoose";
+        vContinueBulliedChooseF();
+        break;
+      }
+      case "vstaysilence":  {
+        state = "bullyingcontinues";
+        bullyingContinuesF();
+        break;
+      }
+      case "bullyingcontinues":  {
+        state = "bullyingcontinues2choose";
+        vContinueBullied2ChooseF();
+        break;
+      }
+      case "vtellpauline2":  {
+        state = "vtellpauline3";
+        vTellPauline3F();
+        break;
+      }
+      case "vtellpauline3":  {
+        state = "heathersupsetveroc";
+        heathersUpsetVeroCF();
+        break;
+      }
+      case "heathersupsetveroc":  {
+        state = "heathersupsetverod";
+        heathersUpsetVeroDF();
+        break;
+      }
+      case "heathersupsetverod":  {
+        state = "heathersupsetverom";
+        heathersUpsetVeroMF();
+        break;
+      }
+      case "heathersupsetverom":  {
+        state = "heathersfightvero1";
+        heathersFightVero1F();
+        break;
+      }
+      case "heathersfightvero1":  {
+        state = "heathersfightvero2";
+        heathersFightVero2F();
+        break;
+      }
+      case "heathersfightvero2":  {
+        state = "heathersfightvero3";
+        heathersFightVero3F();
+        break;
+      }
+      case "vstaysilence2":  {
+        state = "vstaysilence2choose";
+        vstaysilence2ChooseF();
+        break;
+      }
+      case "vtellparents22":  {
+        state = "cynthiaunderstands1";
+        cynthiaUnderstands1F();
+        break;
+      }
+      case "vtellparents22":  {
+        state = "cynthiaunderstands2";
+        cynthiaUnderstands2F();
+        break;
+      }
+      case "cynthiaunderstands2":  {
+        state = "assistedexplain";
+        ending = "The assisted";
+        assistedEndingExplainF();
+        break;
+      }
+      case "helpedexplain":  {
+        state = "ending1";
+        ending1();
+        break;
+      }
+      case "heathersfightvero3":
+      case "vfightback":
+      case "vtellparents":  {
+        state = "vtellparents2";
+        vTellParents2F();
+        break;
+      }
+      case "vtellparents2":  {
+        state = "chapterIII";
+        chapterIIIF();
+        break;
+      }
+      case "chapterIII":  {
+        state = "moveschool";
+        moveSchoolF();
+        break;
+      }
+      case "ending1":  {
+        state = "ending2";
+        ending2F();
         break;
       }
     }
@@ -532,10 +720,10 @@ function veronica1F() {
   setText(veronica1Text, 1, 1);
   setObject(westerburg, 1, 1);
   setObject(veronica, 1, 1);
-  westerburg.x = app.screen.width * 2 / 3
-  westerburg.y = app.screen.height / 2;
   veronica.x = app.screen.width / 3;
   veronica.y = app.screen.height / 2;
+  westerburg.x = app.screen.width * 3 / 4;
+  westerburg.y = veronica.y - veronica.height/2;
 }
 
 var veronica2Text = new PIXI.Text("She has to go far away from home, away from her old friends.", h1S());
@@ -614,7 +802,7 @@ function bellRingsF() {
   setText(bellRingsText, 1, 1);
 }
 
-var teacher = new Sprite(Texture("/assets/people/vtl.svg"));
+var pauline = new Sprite(Texture("/assets/peeps/pauline.svg"));
 var deskT = new Sprite(Texture("/assets/games/school/desk.svg"));
 var deskV = new Sprite(Texture("/assets/games/school/desk.svg"));
 var deskC = new Sprite(Texture("/assets/games/school/desk.svg"));
@@ -627,18 +815,18 @@ function class1F() {
   hideSprite(duke);
   hideSprite(mcnamara);
   setTimeout(() => { 
-    setObject(teacher, 1, 1);
-    teacher.scale.x = -1;
+    setObject(pauline, 1, 1);
+    pauline.scale.x = -1;
     chandler.scale.x = duke.scale.x = mcnamara.scale.x = 1;
-    teacher.y = veronica.y;
-    teacher.x = app.screen.width * 3 / 4;
+    pauline.y = veronica.y;
+    pauline.x = app.screen.width * 3 / 4;
     veronica.x = chandler.x = app.screen.width / 2;
     veronica.y = duke.y = app.screen.height / 3;
     chandler.y = mcnamara.y = app.screen.height * 2 / 3;
     duke.x = mcnamara.x = veronica.x - 300;
     setText(deskT, 1, 1);
     deskT.scale.x = -1;
-    alignText(deskT, teacher, -30);
+    alignText(deskT, pauline, -30);
     setText(deskV, 1, 1);
     alignText(deskV, veronica, -30);
     setText(deskC, 1, 1);
@@ -657,7 +845,7 @@ function class1F() {
 var questionText = new PIXI.Text("Alright class.\nWho can answer this question:\nWhat is 33+77?", h1S(tC));
 function class2F() {
   setText(questionText, 1, 1);
-  alignText(questionText, teacher);
+  alignText(questionText, pauline);
 }
 
 var hcanswerText = new PIXI.Text("I think it is 100, Heather.", h1S(hCC));
@@ -752,30 +940,30 @@ function vAnswerF() {
   alignText(vAnswerText, veronica, 150);
 }
 
-var teacherCallText = new Text("Yes, Veronica, what is it?", h1S(tC));
+var paulineCallText = new Text("Yes, Veronica, what is it?", h1S(tC));
 function vanswer2F() {
   hideSprite(vAnswerText);
-  setText(teacherCallText, 1, 1);
-  alignText(teacherCallText, teacher, 150);
+  setText(paulineCallText, 1, 1);
+  alignText(paulineCallText, pauline, 150);
 }
 
 var vAnswer2Text = new Text("It is 110!", h1S(vC));
 function vanswer3F() {
-  hideSprite(teacherCallText);
+  hideSprite(paulineCallText);
   setText(vAnswer2Text, 1, 1);
   alignText(vAnswer2Text, veronica, 150);
 }
 
-var teacherCall2Text = new Text("Great job Veronica!\nYou get extra credits.", h1S(tC));
+var paulineCall2Text = new Text("Great job Veronica!\nYou get extra credits.", h1S(tC));
 function vanswer4F() {
   hideSprite(vAnswer2Text);
-  setText(teacherCall2Text, 1, 1);
-  alignText(teacherCall2Text, teacher);
+  setText(paulineCall2Text, 1, 1);
+  alignText(paulineCall2Text, pauline);
 }
 
 var whatANerdText = new Text("What a nerd.", h1S(hCC));
 function classLaughF() {
-  hideSprite(teacherCall2Text);
+  hideSprite(paulineCall2Text);
   setText(whatANerdText, 1, 1);
   alignText(whatANerdText, chandler, 150);
 }
@@ -793,7 +981,7 @@ function classLaugh2F() {
   alignText(hahaMText, mcnamara, 150);
 }
 
-var teacherPassText = new Text("No one wants to answer?\nAlright, let's move on.", h1S(tC));
+var paulinePassText = new Text("No one wants to answer?\nAlright, let's move on.", h1S(tC));
 function vNotAnswerF() {
   state = "vnotanswer";
   hideSprite(vAnswer);
@@ -801,17 +989,17 @@ function vNotAnswerF() {
   hideSprite(vAnswerChooseText);
   vAnswerButton.interactive = false;
   vNotAnswerButton.interactive = false;
-  setText(teacherPassText, 1, 1);
-  alignText(teacherPassText, teacher);
+  setText(paulinePassText, 1, 1);
+  alignText(paulinePassText, pauline);
 }
 
 var lunchTimeText = new Text("It's lunch time.", h1S());
 function lunch1F() {
-  hideSprite(teacherPassText);
+  hideSprite(paulinePassText);
   hideSprite(hahaCText);
   hideSprite(hahaDText);
   hideSprite(hahaMText);
-  hideSprite(teacher);
+  hideSprite(pauline);
   hideSprite(veronica);
   hideSprite(chandler);
   hideSprite(duke);
@@ -824,7 +1012,7 @@ function lunch1F() {
   setTimeout(() => {
     setText(lunchTimeText, 1, 1);
     chandler.scale.x = duke.scale.x = mcnamara.scale.x = -1;
-    veronica.y = chandler.y = duke.y = mcnamara.y = teacher.y;
+    veronica.y = chandler.y = duke.y = mcnamara.y = pauline.y;
     chandler.x = app.screen.width * 3 / 5;
     duke.x = chandler.x + 200;
     mcnamara.x = chandler.x + 400;
@@ -844,7 +1032,7 @@ function lunch2F() {
   alignText(vAskLunchText, veronica);
 }
 
-var cLunchYesText = new Text("Oh, yes, definitely!", h1S(hCC));
+var cLunchYesText = new Text("Oh, yes, totally!", h1S(hCC));
 function lunch3F() {
   hideSprite(vAskLunchText);
   setText(cLunchYesText, 1, 1);
@@ -982,7 +1170,7 @@ function vLunchPlease3F() {
   alignText(hahaMText, mcnamara, 150);
 }
 
-var fromThenOnText = new Text("From then on, Veronica consistently finds herself being the subject of bullying.", h1S());
+var fromThenOnText = new Text("From then on, Veronica finds herself being the subject of bullying.", h1S());
 function fromThenOnF() {
   hideSprite(hahaCText);
   hideSprite(hahaDText);
@@ -1005,8 +1193,8 @@ function fromThenOnF() {
     chandler.x = app.screen.width / 2 + 150;
     duke.x = chandler.x + 200;
     mcnamara.x = veronica.x - 200;
-    veronica.y = chandler.y = teacher.y + 100;
-    duke.y = mcnamara.y = teacher.y - 100;
+    veronica.y = chandler.y = pauline.y + 100;
+    duke.y = mcnamara.y = pauline.y - 100;
   }, 500);
 }
 
@@ -1022,7 +1210,7 @@ function testF() {
   duke = new Sprite(Texture("/assets/peeps/duke/duke.svg"));
   mcnamara = new Sprite(Texture("/assets/peeps/mcnamara/mcnamara.svg"));
   setTimeout(() => {
-    showSprite(teacher);
+    showSprite(pauline);
     setObject(veronica, 1, 1);
     setObject(chandler, 1, 1);
     setObject(duke, 1, 1);
@@ -1033,12 +1221,12 @@ function testF() {
     setObject(deskD, 1, 1);
     setObject(deskM, 1, 1);
     setText(testText, 1, 1);
-    veronica.y = teacher.y;
+    veronica.y = pauline.y;
     veronica.x = chandler.x = app.screen.width / 2;
     veronica.y = duke.y = app.screen.height / 3;
     chandler.y = mcnamara.y = app.screen.height * 2 / 3;
     duke.x = mcnamara.x = veronica.x - 300;
-    alignText(deskT, teacher, -70);
+    alignText(deskT, pauline, -70);
     alignText(deskV, veronica, -70);
     alignText(deskC, chandler, -70);
     alignText(deskD, duke, -70);
@@ -1150,35 +1338,35 @@ function vTestNotHelpF() {
   alignText(vNotHelpHeathersText, veronica, 150);
 }
 
-var teacherTestResult1Text = new Text("Alright, class.\nThe results are in.", h1S(tC));
-function teacherTest1F() {
+var paulineTestResult1Text = new Text("Alright, class.\nThe results are in.", h1S(tC));
+function paulineTest1F() {
   hideSprite(vHelpHeathersText);
   hideSprite(vNotHelpHeathersText);
   hideSprite(main);
   setTimeout(() => {
     showSprite(main);
-    setText(teacherTestResult1Text, 1, 1);
-    alignText(teacherTestResult1Text, teacher)
+    setText(paulineTestResult1Text, 1, 1);
+    alignText(paulineTestResult1Text, pauline)
   }, 500);
 }
 
-var teacherTestResult2Text = new Text("Veronica.\nA perfect A+!", h1S(tC));
-function teacherTest2F() {
-  hideSprite(teacherTestResult1Text);
-  setText(teacherTestResult2Text, 1, 1);
-  alignText(teacherTestResult2Text, teacher);
+var paulineTestResult2Text = new Text("Veronica.\nA perfect A+!", h1S(tC));
+function paulineTest2F() {
+  hideSprite(paulineTestResult1Text);
+  setText(paulineTestResult2Text, 1, 1);
+  alignText(paulineTestResult2Text, pauline);
 }
 
-var teacherTestResult3HelpedText = new Text("And the Heathers.\nA+ for each of you!\nGood jobs!", h1S(tC));
-function teacherTest3HelpedF() {
-  hideSprite(teacherTestResult2Text);
-  setText(teacherTestResult3HelpedText, 1, 1);
-  alignText(teacherTestResult3HelpedText, teacher);
+var paulineTestResult3HelpedText = new Text("And the Heathers.\nA for each of you!\nGood jobs!", h1S(tC));
+function paulineTest3HelpedF() {
+  hideSprite(paulineTestResult2Text);
+  setText(paulineTestResult3HelpedText, 1, 1);
+  alignText(paulineTestResult3HelpedText, pauline);
 }
 
 var heathersAcceptVeronica1Text = new Text("Hey, Veronica!", h1S(hCC));
 function heathersAcceptVeronica1F() {
-  hideSprite(teacher);
+  hideSprite(pauline);
   hideSprite(veronica);
   hideSprite(chandler);
   hideSprite(duke);
@@ -1188,15 +1376,15 @@ function heathersAcceptVeronica1F() {
   hideSprite(deskC);
   hideSprite(deskD);
   hideSprite(deskM);
-  hideSprite(teacherTestResult3HelpedText);
-  hideSprite(teacherTestResult3NotHelpedText);
+  hideSprite(paulineTestResult3HelpedText);
+  hideSprite(paulineTestResult3NotHelpedText);
   setTimeout(() => {
     veronica.x = app.screen.width / 3;
     chandler.scale.x = duke.scale.x = mcnamara.scale.x = -1;
-    chandler.x = app.screen.width * 2 / 3 - 100;
+    chandler.x = app.screen.width * 2 / 3 - 150;
     duke.x = chandler.x + 120;
     mcnamara.x = chandler.x + 240;
-    chandler.y = duke.y = mcnamara.y = veronica.y = teacher.y;
+    chandler.y = duke.y = mcnamara.y = veronica.y = pauline.y;
     showSprite(veronica);
     showSprite(chandler);
     showSprite(duke);
@@ -1220,16 +1408,16 @@ function heathersAcceptVeronica3F() {
   alignText(heathersAcceptVeronica3Text, mcnamara);
 }
 
-var teacherTestResult3NotHelpedText = new Text("And the Heathers.\nD for each of you.\nYou need to do better.", h1S(tC));
-function teacherTest3NotHelpedF() {
-  hideSprite(teacherTestResult2Text);
-  setText(teacherTestResult3NotHelpedText, 1, 1);
-  alignText(teacherTestResult3NotHelpedText, teacher);
+var paulineTestResult3NotHelpedText = new Text("And the Heathers.\nD for each of you.\nYou need to do better.", h1S(tC));
+function paulineTest3NotHelpedF() {
+  hideSprite(paulineTestResult2Text);
+  setText(paulineTestResult3NotHelpedText, 1, 1);
+  alignText(paulineTestResult3NotHelpedText, pauline);
 }
 
-var heathersDislikeVeronica1Text = new Text("Uhh. I dislike that dork, Heather.", h1S(hCC));
+var heathersDislikeVeronica1Text = new Text("Ugh. I dislike that dork, Heather.", h1S(hCC));
 function heathersDislikeVeronica1F() {
-  hideSprite(teacher);
+  hideSprite(pauline);
   hideSprite(veronica);
   hideSprite(chandler);
   hideSprite(duke);
@@ -1239,14 +1427,14 @@ function heathersDislikeVeronica1F() {
   hideSprite(deskC);
   hideSprite(deskD);
   hideSprite(deskM);
-  hideSprite(teacherTestResult3HelpedText);
-  hideSprite(teacherTestResult3NotHelpedText);
+  hideSprite(paulineTestResult3HelpedText);
+  hideSprite(paulineTestResult3NotHelpedText);
   setTimeout(() => {
     chandler.scale.x = mcnamara.scale.x = -1;
     chandler.x = app.screen.width / 2
     duke.x = chandler.x - 200;
     mcnamara.x = chandler.x + 200;
-    chandler.y = duke.y = mcnamara.y = veronica.y = teacher.y;
+    chandler.y = duke.y = mcnamara.y = veronica.y = pauline.y;
     showSprite(chandler);
     showSprite(duke);
     showSprite(mcnamara);
@@ -1262,7 +1450,7 @@ function heathersDislikeVeronica2F() {
   alignText(heathersDislikeVeronica2Text, duke, 150);
 }
 
-var heathersDislikeVeronica3Text = new Text("Let's go picking on her, Heather.", h1S(hMC));
+var heathersDislikeVeronica3Text = new Text("Let's go picking on her, Heather!", h1S(hMC));
 function heathersDislikeVeronica3F() {
   hideSprite(heathersDislikeVeronica2Text);
   setText(heathersDislikeVeronica3Text, 1, 1);
@@ -1272,8 +1460,8 @@ function heathersDislikeVeronica3F() {
 function heathersGoPickOnVF() {
   hideSprite(heathersDislikeVeronica3Text);
   chandler.scale.x = mcnamara.scale.x = 1;
-  move(chandler, app.screen.width + 200 + duke.width, chandler.y, 5000);
-  move(duke, app.screen.width + duke.width, duke.y, 5000);
+  move(chandler, app.screen.width + 200 + duke.width, chandler.y, 2000);
+  move(duke, app.screen.width + duke.width, duke.y, 2000);
   move(mcnamara, app.screen.width + 400 + duke.width, mcnamara.y, 2000);
 }
 
@@ -1297,11 +1485,11 @@ var vFindHeathersBullyText = new PIXI.Text("Veronica finds Chi, a friend of her,
 var chi = new Sprite(Texture("/assets/peeps/chi/shock.svg"));
 function vFindHeathersBullyF() {
   setText(vFindHeathersBullyText, 1, 1);
+  hideSprite(chapterIIText);
   chandler = new Sprite(Texture("/assets/peeps/chandler/cruel.svg"));
   duke = new Sprite(Texture("/assets/peeps/duke/shifty.svg"));
   mcnamara = new Sprite(Texture("/assets/peeps/mcnamara/unpleasant.svg"));
   setTimeout(() => {
-    hideSprite(chapterIIText);
     setObject(veronica, 1, 1);
     setObject(chi, 1, 1);
     setObject(chandler, 1, 1);
@@ -1312,17 +1500,17 @@ function vFindHeathersBullyF() {
     chandler.x = app.screen.width / 2 + 300;
     duke.x = chandler.x + 200;
     mcnamara.x = chi.x - 200;
-    veronica.y = chi.y = chandler.y = teacher.y + 100;
-    duke.y = mcnamara.y = teacher.y - 100;
+    veronica.y = chi.y = chandler.y = pauline.y + 100;
+    duke.y = mcnamara.y = pauline.y - 100;
     move(veronica, app.screen.width / 4, veronica.y, 1000);
-  }, 500);
+  }, 200);
 }
 
 var vFindHeathersBullyChooseText = new Text("What should Veronica do?", h1S());
 var vStopThem = new PIXI.Container();
 var vStopThemButton = new Button();
-var reportToTeacher = new PIXI.Container();
-var reportToTeacherButton = new Button();
+var reportToPauline = new PIXI.Container();
+var reportToPaulineButton = new Button();
 var ignoreIt = new PIXI.Container();
 var ignoreItButton = new Button();
 var joinThem = new PIXI.Container();
@@ -1356,29 +1544,29 @@ function vFindHeathersBullyChooseF() {
   chi1.scale.set(0.3, 0.3);
   showSprite(vStopThem);
 
-  reportToTeacher.x = (app.screen.width * 3) / 4 - 150;
-  reportToTeacher.y = app.screen.height - 160;
-  reportToTeacher.alpha = 0;
-  main.addChild(reportToTeacher);
-  reportToTeacherButton.interactive = true;
-  reportToTeacherButton.buttonMode = true;
-  reportToTeacher.addChild(reportToTeacherButton);
-  reportToTeacherButton.on("click", () => {
+  reportToPauline.x = (app.screen.width * 3) / 4 - 150;
+  reportToPauline.y = app.screen.height - 160;
+  reportToPauline.alpha = 0;
+  main.addChild(reportToPauline);
+  reportToPaulineButton.interactive = true;
+  reportToPaulineButton.buttonMode = true;
+  reportToPauline.addChild(reportToPaulineButton);
+  reportToPaulineButton.on("click", () => {
     timeout();
-    reportToTeacherF();
+    reportToPaulineF();
   });
-  var reportToTeacherText = new Text("Report to teacher", h2S);
-  reportToTeacher.addChild(reportToTeacherText);
-  reportToTeacherText.anchor.set(1, 0.5);
-  reportToTeacherText.x = 280;
-  reportToTeacherText.y = 40;
-  var teacher1 = new Sprite(Texture("/assets/people/vtl.svg"));
-  reportToTeacher.addChild(teacher1);
-  teacher1.anchor.set(0, 0.5);
-  teacher1.x = 20;
-  teacher1.y = 40;
-  teacher1.scale.set(0.3, 0.3);
-  showSprite(reportToTeacher);
+  var reportToPaulineText = new Text("Report to teacher", h2S);
+  reportToPauline.addChild(reportToPaulineText);
+  reportToPaulineText.anchor.set(1, 0.5);
+  reportToPaulineText.x = 280;
+  reportToPaulineText.y = 40;
+  var pauline1 = new Sprite(Texture("/assets/peeps/pauline.svg"));
+  reportToPauline.addChild(pauline1);
+  pauline1.anchor.set(0, 0.5);
+  pauline1.x = 20;
+  pauline1.y = 40;
+  pauline1.scale.set(0.3, 0.3);
+  showSprite(reportToPauline);
   
   ignoreIt.x = app.screen.width / 4 - 150;
   ignoreIt.y = app.screen.height - 160 - 100;
@@ -1429,16 +1617,16 @@ function vFindHeathersBullyChooseF() {
   showSprite(joinThem);
 }
 
-var vStopThemText = new Text("No, stop!", h2S(vC));
+var vStopThemText = new Text("No, stop!", h1S(vC));
 function vStopThemF() {
   state = "vstopbully";
   hideSprite(vStopThem);
-  hideSprite(reportToTeacher);
+  hideSprite(reportToPauline);
   hideSprite(ignoreIt);
   hideSprite(joinThem);
   hideSprite(vFindHeathersBullyChooseText);
   vStopThemButton.interactive = false;
-  reportToTeacherButton.interactive = false;
+  reportToPaulineButton.interactive = false;
   ignoreItButton.interactive = false;
   joinThemButton.interactive = false;
   move(veronica, app.screen.width / 3, veronica.y, 1000);
@@ -1446,46 +1634,132 @@ function vStopThemF() {
   alignText(vStopThemText, veronica, 150);
 }
 
-function reportToTeacherF() {
-  state = "vreporttoteacher";
+var vStopBullyCText = new Text("Are we gonna have a problem?", h1S(hCC));
+function vStopBullyCF() {
+  hideSprite(vStopThemText);
+  setText(vStopBullyCText, 1, 1);
+  alignText(vStopBullyCText, chandler, 150);
+}
+
+var vStopBullyDText = new Text("You got a bone to pick?", h1S(hDC));
+function vStopBullyDF() {
+  hideSprite(vStopBullyCText);
+  setText(vStopBullyDText, 1, 1);
+  alignText(vStopBullyDText, duke, 150);
+}
+
+var vStopBullyMText = new Text("I think you should get away, Veronica.", h1S(hMC));
+function vStopBullyMF() {
+  hideSprite(vStopBullyDText);
+  setText(vStopBullyMText, 1, 1);
+  alignText(vStopBullyMText, mcnamara, 150);
+}
+
+function reportToPaulineF() {
+  state = "vreporttopauline";
   hideSprite(vStopThem);
-  hideSprite(reportToTeacher);
+  hideSprite(reportToPauline);
   hideSprite(ignoreIt);
   hideSprite(joinThem);
   hideSprite(vFindHeathersBullyChooseText);
   vStopThemButton.interactive = false;
-  reportToTeacherButton.interactive = false;
+  reportToPaulineButton.interactive = false;
   ignoreItButton.interactive = false;
   joinThemButton.interactive = false;
   veronica.scale.x = -1;
   move(veronica, -veronica.width, veronica.y, 2000);
+}
+
+function reportToPauline2F() {
+  pauline.y = mcnamara.y;
+  pauline.x = veronica.x;
+  pauline.scale.x = 1;
+  veronica.scale.x = 1;
+  showSprite(pauline);
+  move(veronica, app.screen.width/4, veronica.y, 2000);
+  move(pauline, app.screen.width/4, pauline.y, 2000);
+  hideSprite(chandler);
+  hideSprite(duke);
+  chandler = new Sprite(Texture("/assets/peeps/chandler/chandler.svg"));
+  duke = new Sprite(Texture("/assets/peeps/duke/duke.svg"));
+  setTimeout(() => {
+    chandler.scale.x = duke.scale.x = -1;
+    setObject(chandler, 1, 1);
+    setObject(duke, 1, 1);
+    chandler.x = app.screen.width / 2 + 300;
+    duke.x = chandler.x + 200;
+    chandler.y = veronica.y
+    duke.y = mcnamara.y;
+  }, 100);
+}
+
+var reportToPauline3Text = new Text("Well, well, well.\nIsn't it the Heathers?", h1S(tC));
+function reportToPauline3F() {
+  setText(reportToPauline3Text, 1, 1);
+  alignText(reportToPauline3Text, pauline);
 }
 
 function ignoreItF() {
   state = "vignoreit";
   hideSprite(vStopThem);
-  hideSprite(reportToTeacher);
+  hideSprite(reportToPauline);
   hideSprite(ignoreIt);
   hideSprite(joinThem);
   hideSprite(vFindHeathersBullyChooseText);
   vStopThemButton.interactive = false;
-  reportToTeacherButton.interactive = false;
+  reportToPaulineButton.interactive = false;
   ignoreItButton.interactive = false;
   joinThemButton.interactive = false;
   veronica.scale.x = -1;
   move(veronica, -veronica.width, veronica.y, 2000);
 }
 
-var vJoinThemText = new Text("Ha ha ha", h2S(vC));
+function ignoreIt2F() {
+  pauline.y = mcnamara.y;
+  pauline.x = veronica.x;
+  pauline.scale.x = 1;
+  showSprite(pauline);
+  move(pauline, app.screen.width/4, pauline.y, 2000);
+  hideSprite(chandler);
+  hideSprite(duke);
+  chandler = new Sprite(Texture("/assets/peeps/chandler/chandler.svg"));
+  duke = new Sprite(Texture("/assets/peeps/duke/duke.svg"));
+  setTimeout(() => {
+    chandler.scale.x = duke.scale.x = -1;
+    setObject(chandler, 1, 1);
+    setObject(duke, 1, 1);
+    chandler.x = app.screen.width / 2 + 300;
+    duke.x = chandler.x + 200;
+    chandler.y = veronica.y
+    duke.y = mcnamara.y;
+  }, 100);
+}
+
+function ignoreIt3F() {
+  setText(reportToPauline3Text, 1, 1);
+  alignText(reportToPauline3Text, pauline);
+}
+
+var ignoreIt4CText = new Text("It's Veronica!", h1S(hCC));
+var ignoreIt4DText = new Text("It's Veronica!", h1S(hDC));
+function ignoreIt4F() {
+  hideSprite(reportToPauline3Text);
+  setText(ignoreIt4CText, 1, 1);
+  alignText(ignoreIt4CText, chandler, 150);
+  setText(ignoreIt4DText, 1, 1);
+  alignText(ignoreIt4DText, duke, 150);
+}
+
+var vJoinThemText = new Text("Ha ha ha", h1S(vC));
 function joinThemF() {
   state = "vjoinbully";
   hideSprite(vStopThem);
-  hideSprite(reportToTeacher);
+  hideSprite(reportToPauline);
   hideSprite(ignoreIt);
   hideSprite(joinThem);
   hideSprite(vFindHeathersBullyChooseText);
   vStopThemButton.interactive = false;
-  reportToTeacherButton.interactive = false;
+  reportToPaulineButton.interactive = false;
   ignoreItButton.interactive = false;
   joinThemButton.interactive = false;
   hideSprite(veronica);
@@ -1496,4 +1770,720 @@ function joinThemF() {
   move(veronica, app.screen.width / 3, veronica.y, 1000);
   setText(vJoinThemText, 1, 1);
   alignText(vJoinThemText, veronica, 150);
+}
+
+var vJoinBullyCText = new Text("You know what, Veronica?", h1S(hCC));
+function vJoinBullyCF() {
+  hideSprite(veronica);
+  hideSprite(chi);
+  hideSprite(chandler);
+  hideSprite(duke);
+  hideSprite(mcnamara);
+  hideSprite(vJoinThemText);
+  veronica = new Sprite(Texture("/assets/peeps/veronica/veronica.svg"));
+  chandler = new Sprite(Texture("/assets/peeps/chandler/chandler.svg"));
+  duke = new Sprite(Texture("/assets/peeps/duke/duke.svg"));
+  mcnamara = new Sprite(Texture("/assets/peeps/mcnamara/mcnamara.svg"));
+  setTimeout(() => {
+    chandler.scale.x = duke.scale.x = mcnamara.scale.x = -1;
+    veronica.y = chandler.y = duke.y = mcnamara.y = pauline.y;
+    chandler.x = app.screen.width * 3 / 5;
+    duke.x = chandler.x + 200;
+    mcnamara.x = chandler.x + 400;
+    veronica.x = app.screen.width / 4;
+    move(veronica, app.screen.width / 3, veronica.y, 2000);
+    setObject(veronica, 1, 1);
+    setObject(chandler, 1, 1);
+    setObject(duke, 1, 1);
+    setObject(mcnamara, 1, 1);
+    setText(vJoinBullyCText, 1, 1);
+    alignText(vJoinBullyCText, chandler, 150);
+  }, 200);
+}
+
+var vJoinBullyDText = new Text("You seem pretty cool.", h1S(hDC));
+function vJoinBullyDF() {
+  hideSprite(vJoinBullyCText);
+  setText(vJoinBullyDText, 1, 1);
+  alignText(vJoinBullyDText, duke, 150);
+}
+
+var vJoinBullyMText = new Text("You can join\nour group!", h1S(hMC));
+function vJoinBullyMF() {
+  hideSprite(vJoinBullyDText);
+  setText(vJoinBullyMText, 1, 1);
+  alignText(vJoinBullyMText, mcnamara);
+}
+
+var veronicaBully1Text = new Text("From then on, Veronica becomes one of the Heathers.", h1S());
+function veronicaBully1F() {
+  hideSprite(vJoinBullyMText);
+  setText(veronicaBully1Text, 1, 1);
+  hideSprite(veronica);
+  hideSprite(chandler);
+  hideSprite(duke);
+  hideSprite(mcnamara);
+  chandler = new Sprite(Texture("/assets/peeps/chandler/cruel.svg"));
+  duke = new Sprite(Texture("/assets/peeps/duke/shifty.svg"));
+  mcnamara = new Sprite(Texture("/assets/peeps/mcnamara/unpleasant.svg"));
+  setTimeout(() => {
+    setObject(veronica, 1, 1);
+    setObject(chi, 1, 1);
+    setObject(chandler, 1, 1);
+    setObject(duke, 1, 1);
+    setObject(mcnamara, 1, 1);
+    veronica.x = app.screen.width / 5;
+    chi.x = app.screen.width / 2;
+    chandler.x = app.screen.width / 2 + 300;
+    duke.x = chandler.x + 200;
+    mcnamara.x = chi.x - 200;
+    veronica.y = chi.y = chandler.y = pauline.y + 100;
+    duke.y = mcnamara.y = pauline.y - 100;
+    move(veronica, app.screen.width / 4, veronica.y, 1000);
+  }, 200);
+}
+
+var veronicaBully2Text = new Text("Bullying other students.", h1S());
+function veronicaBully2F() {
+  hideSprite(veronicaBully1Text);
+  hideSprite(veronica);
+  veronica = new Sprite(Texture("/assets/peeps/veronica/cruel.svg"));
+  setTimeout(() => {
+    setText(veronicaBully2Text, 1, 1);
+    setObject(veronica, 1, 1);
+    veronica.y = chi.y;
+    veronica.x = app.screen.width / 4;
+    move(veronica, app.screen.width / 3, veronica.y, 1000);
+  }, 200);
+}
+
+var veronicaBully3Text = new Text("Is this the best for her?", h1S());
+function veronicaBully3F() {
+  hideSprite(veronicaBully2Text);
+  setText(veronicaBully3Text, 1, 1);
+  move(chi, app.screen.width + chi.width, chi.y, 10000);
+}
+
+var vContinueBeingBulliedText = new Text("Veronica finds herself being bullied yet again.", h1S());
+function vContinueBeingBulliedF() {
+  hideSprite(chapterIIText);
+  hideSprite(vStopBullyMText);
+  hideSprite(reportToPauline3Text);
+  hideSprite(ignoreIt4CText);
+  hideSprite(ignoreIt4DText);
+  hideSprite(chi);
+  hideSprite(pauline);
+  hideSprite(veronica);
+  hideSprite(chandler);
+  hideSprite(duke);
+  hideSprite(mcnamara);
+  setText(vContinueBeingBulliedText, 1, 1);
+  veronica = new Sprite(Texture("/assets/peeps/veronica/shock.svg"));
+  chandler = new Sprite(Texture("/assets/peeps/chandler/cruel.svg"));
+  duke = new Sprite(Texture("/assets/peeps/duke/shifty.svg"));
+  mcnamara = new Sprite(Texture("/assets/peeps/mcnamara/unpleasant.svg"));
+  setTimeout(() => {
+    setObject(veronica, 1, 1);
+    setObject(chandler, 1, 1);
+    setObject(duke, 1, 1);
+    setObject(mcnamara, 1, 1);
+    veronica.x = app.screen.width / 2 - 150;
+    chandler.x = app.screen.width / 2 + 150;
+    duke.x = chandler.x + 200;
+    mcnamara.x = veronica.x - 200;
+    veronica.y = chandler.y = app.screen.height / 2 + 100;
+    duke.y = mcnamara.y = app.screen.height / 2 - 100;
+  }, 500);
+}
+
+var vContinueBulliedChooseText = new Text("What should Veronica do?", h1S());
+var vStaySilence = new PIXI.Container();
+var vStaySilenceButton = new Button();
+var vTellParents = new PIXI.Container();
+var vTellParentsButton = new Button();
+function vContinueBulliedChooseF() {
+  hideSprite(vContinueBeingBulliedText);
+  hideSprite(chandler);
+  hideSprite(duke);
+  hideSprite(mcnamara);
+  hideSprite(hMAskText);
+  timeout();
+  setText(vContinueBulliedChooseText, 1, 1);
+
+  vStaySilence.x = app.screen.width / 4 - 150;
+  vStaySilence.y = app.screen.height - 160;
+  vStaySilence.alpha = 0;
+  main.addChild(vStaySilence);
+  vStaySilenceButton.interactive = true;
+  vStaySilenceButton.buttonMode = true;
+  vStaySilence.addChild(vStaySilenceButton);
+  vStaySilenceButton.on("click", () => {
+    timeout();
+    vStaySilenceF();
+  });
+  var vStaySilenceText = new Text("Stay silence", h2S);
+  vStaySilence.addChild(vStaySilenceText);
+  vStaySilenceText.anchor.set(1, 0.5);
+  vStaySilenceText.x = 280;
+  vStaySilenceText.y = 40;
+  var vero = new Sprite(Texture("/assets/peeps/veronica/veronica.svg"));
+  vStaySilence.addChild(vero);
+  vero.anchor.set(0, 0.5);
+  vero.x = 20;
+  vero.y = 40;
+  vero.scale.set(0.3, 0.3);
+  showSprite(vStaySilence);
+
+  vTellParents.x = (app.screen.width * 3) / 4 - 150;
+  vTellParents.y = app.screen.height - 160;
+  vTellParents.alpha = 0;
+  main.addChild(vTellParents);
+  vTellParentsButton.interactive = true;
+  vTellParentsButton.buttonMode = true;
+  vTellParents.addChild(vTellParentsButton);
+  vTellParentsButton.on("click", () => {
+    timeout();
+    vTellParentsF();
+  });
+  var vTellParentsText = new Text("Tell parents", h2S);
+  vTellParents.addChild(vTellParentsText);
+  vTellParentsText.anchor.set(1, 0.5);
+  vTellParentsText.x = 280;
+  vTellParentsText.y = 40;
+  var mom = new Sprite(Texture("/assets/peeps/cynthia.svg"));
+  vTellParents.addChild(mom);
+  mom.anchor.set(0, 0.5);
+  mom.x = 20;
+  mom.y = 40;
+  mom.scale.set(0.3, 0.3);
+  showSprite(vTellParents);
+}
+
+var cynthia = new Sprite(Texture("/assets/peeps/cynthia.svg"));
+function vTellParentsF() {
+  state = "vtellparents";
+  hideSprite(vStaySilence);
+  hideSprite(vTellParents);
+  hideSprite(vContinueBulliedChooseText);
+  vAnswerButton.interactive = false;
+  vTellParentsButton.interactive = false;
+  hideSprite(veronica);
+  veronica = new Sprite(Texture("/assets/peeps/veronica/worried.svg"));
+  setTimeout(() => {
+    veronica.x = app.screen.width/2 - 100;
+    cynthia.x = app.screen.width/2 + 100;
+    cynthia.scale.x = -1;
+    veronica.y = cynthia.y = app.screen.height/2;
+    setObject(veronica, 1, 1);
+    setObject(cynthia, 1, 1);
+  }, 200);
+}
+
+var cynthiaToldText = new Text("This cannot continue.", h1S(hMC));
+function vTellParents2F() {
+  veronica.x = app.screen.width/2 - 100;
+  cynthia.x = app.screen.width/2 + 100;
+  cynthia.scale.x = -1;
+  veronica.y = cynthia.y = app.screen.height/2;
+  setObject(veronica, 1, 1);
+  setObject(cynthia, 1, 1);
+  hideSprite(fightBack);
+  setText(cynthiaToldText, 1, 1);
+  alignText(cynthiaToldText, cynthia, 150);
+}
+
+function vStaySilenceF() {
+  state = "vstaysilence";
+  hideSprite(vStaySilence);
+  hideSprite(vTellParents);
+  hideSprite(vContinueBulliedChooseText);
+  vStaySilenceButton.interactive = false;
+  vTellParentsButton.interactive = false;
+  hideSprite(veronica);
+  veronica = new Sprite(Texture("/assets/peeps/veronica/worried.svg"));
+  setTimeout(() => {
+    veronica.x = app.screen.width/2;
+    veronica.y = app.screen.height/2;
+    setObject(veronica, 1, 1);
+  }, 200);
+}
+
+var bullyingContinuesText = new Text("The bullying continues.", h1S());
+function bullyingContinuesF() {
+  move(veronica, app.screen.width/3, veronica.y, 1000);
+  chandler.y = duke.y = mcnamara.y = veronica.y;
+  chandler.x = app.screen.width*2/3 - 100;
+  duke.x = chandler.x + 150;
+  mcnamara.x = chandler.x + 300;
+  mcnamara.scale.x = -1;
+  setObject(chandler, 1, 1);
+  setObject(duke, 1, 1);
+  setObject(mcnamara, 1, 1);
+  setText(bullyingContinuesText, 1, 1);
+}
+
+var vContinueBullied2ChooseText = new Text("What should Veronica do?", h1S());
+var vStaySilence2 = new PIXI.Container();
+var vStaySilence2Button = new Button();
+var vFightBack = new PIXI.Container();
+var vFightBackButton = new Button();
+var vTellPauline2 = new PIXI.Container();
+var vTellPauline2Button = new Button();
+function vContinueBullied2ChooseF() {
+  hideSprite(bullyingContinuesText);
+  hideSprite(hMAskText);
+  timeout();
+  setText(vContinueBullied2ChooseText, 1, 1);
+
+  vStaySilence2.x = app.screen.width / 4 - 150;
+  vStaySilence2.y = app.screen.height - 160;
+  vStaySilence2.alpha = 0;
+  main.addChild(vStaySilence2);
+  vStaySilence2Button.interactive = true;
+  vStaySilence2Button.buttonMode = true;
+  vStaySilence2.addChild(vStaySilence2Button);
+  vStaySilence2Button.on("click", () => {
+    timeout();
+    vStaySilence2F();
+  });
+  var vStaySilence2Text = new Text("Stay silence", h2S);
+  vStaySilence2.addChild(vStaySilence2Text);
+  vStaySilence2Text.anchor.set(1, 0.5);
+  vStaySilence2Text.x = 280;
+  vStaySilence2Text.y = 40;
+  var vero = new Sprite(Texture("/assets/peeps/veronica/veronica.svg"));
+  vStaySilence2.addChild(vero);
+  vero.anchor.set(0, 0.5);
+  vero.x = 20;
+  vero.y = 40;
+  vero.scale.set(0.3, 0.3);
+  showSprite(vStaySilence2);
+
+  vFightBack.x = (app.screen.width * 3) / 4 - 150;
+  vFightBack.y = app.screen.height - 160;
+  vFightBack.alpha = 0;
+  main.addChild(vFightBack);
+  vFightBackButton.interactive = true;
+  vFightBackButton.buttonMode = true;
+  vFightBack.addChild(vFightBackButton);
+  vFightBackButton.on("click", () => {
+    timeout();
+    vFightBackF();
+  });
+  var vFightBackText = new Text("Fight back", h2S);
+  vFightBack.addChild(vFightBackText);
+  vFightBackText.anchor.set(1, 0.5);
+  vFightBackText.x = 280;
+  vFightBackText.y = 40;
+  var fight = new Sprite(Texture("/aassets/games/school/fight.svg"));
+  vFightBack.addChild(fight);
+  fight.anchor.set(0, 0.5);
+  fight.x = 20;
+  fight.y = 40;
+  fight.scale.set(0.3, 0.3);
+  showSprite(vFightBack);
+  
+  vTellPauline2.x = app.screen.width / 2 - 150;
+  vTellPauline2.y = app.screen.height - 160;
+  vTellPauline2.alpha = 0;
+  main.addChild(vTellPauline2);
+  vTellPauline2Button.interactive = true;
+  vTellPauline2Button.buttonMode = true;
+  vTellPauline2.addChild(vTellPauline2Button);
+  vTellPauline2Button.on("click", () => {
+    timeout();
+    vTellPauline2F();
+  });
+  var vTellPauline2Text = new Text("Tell teacher", h2S);
+  vTellPauline2.addChild(vTellPauline2Text);
+  vTellPauline2Text.anchor.set(1, 0.5);
+  vTellPauline2Text.x = 280;
+  vTellPauline2Text.y = 40;
+  var pauline2 = new Sprite(Texture("/assets/peeps/pauline.svg"));
+  vTellPauline2.addChild(pauline2);
+  pauline2.anchor.set(0, 0.5);
+  pauline2.x = 20;
+  pauline2.y = 40;
+  pauline2.scale.set(0.3, 0.3);
+  showSprite(vTellPauline2);
+}
+
+function vTellPauline2F() {
+  state = "vtellpauline2";
+  hideSprite(vStaySilence2);
+  hideSprite(vFightBack);
+  hideSprite(vTellPauline2);
+  hideSprite(vContinueBullied2ChooseText);
+  vStaySilence2Button.interactive = false;
+  vFightBackButton.interactive = false;
+  vTellPauline2Button.interactive = false;
+  hideSprite(chandler);
+  hideSprite(duke);
+  hideSprite(mcnamara);
+  setObject(pauline, 1, 1);
+  pauline.x = app.screen.width*2/3;
+  pauline.y = veronica.y;
+  move(veronica, app.screen.width/3, veronica.y, 500);
+}
+
+var vTellPauline3Text = new Text("I understand.", h1S(tC));
+function vTellPauline3F() {
+  setText(vTellPauline3Text, 1, 1);
+  alignText(vTellPauline3Text, pauline, 150);
+}
+
+var heathersUpsetVeroCText = new Text("Ugh, that dork got us in trouble again, Heather.", h1S(hCC));
+function heathersUpsetVeroCF() {
+  hideSprite(vTellPauline3Text);
+  hideSprite(veronica);
+  hideSprite(pauline);
+  chandler = new Sprite(Texture("/assets/peeps/chandler/chandler.svg"))
+  duke = new Sprite(Texture("/assets/peeps/duke/duke.svg"))
+  mcnamara = new Sprite(Texture("/assets/peeps/mcnamara/mcnamara.svg"))
+  chandler.scale.x = mcnamara.scale.x = -1;
+  chandler.x = app.screen.width / 2
+  duke.x = chandler.x - 200;
+  mcnamara.x = chandler.x + 200;
+  chandler.y = duke.y = mcnamara.y = veronica.y = pauline.y;
+  setObject(chandler, 1, 1);
+  setObject(duke, 1, 1);
+  setObject(mcnamara, 1, 1);
+  setText(heathersUpsetVeroCText, 1, 1);
+  alignText(heathersUpsetVeroCText, chandler, 150);
+}
+
+var heathersUpsetVeroDText = new Text("Yes Heather, I wanna get revenge.", h1S(hDC));
+function heathersUpsetVeroDF() {
+  hideSprite(heathersUpsetVeroCText);
+  setText(heathersUpsetVeroDText, 1, 1);
+  alignText(heathersUpsetVeroDText, duke, 150);
+}
+
+var heathersUpsetVeroMText = new Text("Let's go picking on her, Heather!", h1S(hMC));
+function heathersUpsetVeroMF() {
+  hideSprite(heathersUpsetVeroDText);
+  setText(heathersUpsetVeroMText, 1, 1);
+  alignText(heathersUpsetVeroMText, mcnamara, 150);
+}
+
+function heathersFightVero1F() {
+  hideSprite(heathersUpsetVeroMText);
+  chandler.scale.x = mcnamara.scale.x = 1;
+  move(chandler, app.screen.width + 200 + duke.width, chandler.y, 1000);
+  move(duke, app.screen.width + duke.width, duke.y, 1000);
+  move(mcnamara, app.screen.width + 400 + duke.width, mcnamara.y, 1000);
+}
+
+function heathersFightVero2F() {
+  veronica.scale.x = chandler.scale.x = duke.scale.x = mcnamara.scale.x = -1;
+  chandler.x = app.screen.width * 2 / 3 - 100;
+  veronica.x = app.screen.width / 3;
+  duke.x = chandler.x + 120;
+  mcnamara.x = chandler.x + 240;
+  chandler.y = duke.y = mcnamara.y = veronica.y;
+  showSprite(veronica);
+  showSprite(chandler);
+  showSprite(duke);
+  showSprite(mcnamara);
+}
+
+function heathersFightVero3F() {
+  move(chandler, app.screen.width/3+10, chandler.y, 500);
+  move(duke, app.screen.width/3+10, duke.y, 500);
+  move(mcnamara, app.screen.width/3+10, mcnamara.y, 500);
+  fightBack.x = veronica.x;
+  fightBack.y = veronica.y;
+  setTimeout(() => {
+    hideSprite(veronica);
+    hideSprite(chandler);
+    hideSprite(duke);
+    hideSprite(mcnamara);
+    setObject(fightBack, 1, 1);
+  }, 300);
+}
+
+var fightBack = new Sprite(Texture("/assets/games/school/fight.svg"));
+function vFightBackF() {
+  state = "vfightback";
+  hideSprite(vStaySilence2);
+  hideSprite(vFightBack);
+  hideSprite(vTellPauline2);
+  hideSprite(vContinueBullied2ChooseText);
+  vStaySilence2Button.interactive = false;
+  vFightBackButton.interactive = false;
+  vTellPauline2Button.interactive = false;
+  fightBack.x = app.screen.width/2;
+  fightBack.y = veronica.y;
+  move(veronica, app.screen.width/2-10, veronica.y, 500);
+  move(chandler, app.screen.width/2+10, chandler.y, 500);
+  move(duke, app.screen.width/2+10, duke.y, 500);
+  move(mcnamara, app.screen.width/2+10, mcnamara.y, 500);
+  setTimeout(() => {
+    hideSprite(veronica);
+    hideSprite(chandler);
+    hideSprite(duke);
+    hideSprite(mcnamara);
+    setObject(fightBack, 1, 1);
+  }, 300);
+}
+
+var vStaySilence2Text = new PIXI.Text("Veronica's performance at school keeps dropping. Her parents are not happy.", h1S());
+function vStaySilence2F() {
+  state = "vstaysilence2";
+  hideSprite(vStaySilence2);
+  hideSprite(vFightBack);
+  hideSprite(vTellPauline2);
+  hideSprite(vContinueBullied2ChooseText);
+  vStaySilence2Button.interactive = false;
+  vFightBackButton.interactive = false;
+  vTellPauline2Button.interactive = false;
+  hideSprite(chandler);
+  hideSprite(duke);
+  hideSprite(mcnamara);
+  move(veronica, app.screen.width/2, veronica.y, 500);
+  setText(vStaySilence2Text, 1, 1);
+}
+
+var vstaysilence2ChooseText = new Text("What should Veronica do?", h1S());
+var vStaySilence3 = new PIXI.Container();
+var vStaySilence3Button = new Button();
+var vTellParents22 = new PIXI.Container();
+var vTellParents22Button = new Button();
+function vstaysilence2ChooseF() {
+  timeout();
+  setText(vstaysilence2ChooseText, 1, 1);
+
+  vStaySilence3.x = app.screen.width / 4 - 150;
+  vStaySilence3.y = app.screen.height - 160;
+  vStaySilence3.alpha = 0;
+  main.addChild(vStaySilence3);
+  vStaySilence3Button.interactive = true;
+  vStaySilence3Button.buttonMode = true;
+  vStaySilence3.addChild(vStaySilence3Button);
+  vStaySilence3Button.on("click", () => {
+    timeout();
+    vStaySilence3F();
+  });
+  var vStaySilence3Text = new Text("Stay silence", h2S);
+  vStaySilence3.addChild(vStaySilence3Text);
+  vStaySilence3Text.anchor.set(1, 0.5);
+  vStaySilence3Text.x = 280;
+  vStaySilence3Text.y = 40;
+  var vero = new Sprite(Texture("/assets/peeps/veronica/veronica.svg"));
+  vStaySilence3.addChild(vero);
+  vero.anchor.set(0, 0.5);
+  vero.x = 20;
+  vero.y = 40;
+  vero.scale.set(0.3, 0.3);
+  showSprite(vStaySilence3);
+
+  vTellParents22.x = (app.screen.width * 3) / 4 - 150;
+  vTellParents22.y = app.screen.height - 160;
+  vTellParents22.alpha = 0;
+  main.addChild(vTellParents22);
+  vTellParents22Button.interactive = true;
+  vTellParents22Button.buttonMode = true;
+  vTellParents22.addChild(vTellParents22Button);
+  vTellParents22Button.on("click", () => {
+    timeout();
+    vTellParents222F();
+  });
+  var vTellParents22Text = new Text("Tell parents", h2S);
+  vTellParents22.addChild(vTellParents22Text);
+  vTellParents22Text.anchor.set(1, 0.5);
+  vTellParents22Text.x = 280;
+  vTellParents22Text.y = 40;
+  var mom = new Sprite(Texture("/assets/peeps/cynthia.svg"));
+  vTellParents22.addChild(mom);
+  mom.anchor.set(0, 0.5);
+  mom.x = 20;
+  mom.y = 40;
+  mom.scale.set(0.3, 0.3);
+  showSprite(vTellParents22);
+}
+
+function vTellParents22F() {
+  state = "vtellparents22";
+  hideSprite(vStaySilence3);
+  hideSprite(vTellParents22);
+  hideSprite(vContinueBullied2ChooseText);
+  vStaySilence3Button.interactive = false;
+  vTellParents22Button.interactive = false;
+  veronica.y = cynthia.y = app.screen.height/2;
+  veronica.x = app.screen.width/2-100;
+  cynthia.x = app.screen.width/2+100;
+  cynthia.scale.x = -1;
+  setObject(veronica, 1, 1);
+  setObject(cynthia, 1, 1);
+}
+
+var cynthiaUnderstands1Text = new PIXI.Text("Oh my dear Veronica!\nI never realised what you had to go through.\nI am so sorry.", h1S(hMC));
+function cynthiaUnderstands1F() {
+  setText(cynthiaUnderstands1Text, 1, 1);
+  alignText(cynthiaUnderstands1Text, cynthia);
+}
+
+var cynthiaUnderstands2Text = new PIXI.Text("I promise you will never\nhave to go through this anymore.", h1S(hMC));
+function cynthiaUnderstands2F() {
+  hideText(cynthiaUnderstands2Text);
+  setText(cynthiaUnderstands2Text, 1, 1);
+  alignText(cynthiaUnderstands2Text, cynthia);
+}
+
+var chapterIIIText = new PIXI.Text("Chapter III: A new beginning", h1S());
+function chapterIIIF() {
+  hideSprite(veronica);
+  hideSprite(cynthia);
+  hideSprite(cynthiaToldText);
+  chapterIIIText.x = 40;
+  chapterIIIText.y = 20;
+  chapterIIIText.alpha = 0;
+  chapterIIIText.scale.set(1.2, 1.2);
+  main.addChild(chapterIIIText);
+  showSprite(chapterIIIText);
+  document.title = "Seventeen: A new beginning";
+}
+
+var cynthiaMoveSchoolText = new Text("I'm sure\nyou'll find peace here!", h1S(hMC));
+var northshore = new Sprite(Texture("/assets/games/school/northshore.svg"));
+function moveSchoolF() {
+  hideSprite(chapterIIIText);
+  veronica = new Sprite(Texture("/assets/peeps/veronica/veronica.svg"));
+  veronica.x = app.screen.width / 3;
+  cynthia.x = veronica.x - 120;
+  veronica.y = cynthia.y = app.screen.height / 2;
+  northshore.x = app.screen.width * 3 / 4;
+  northshore.y = veronica.y - veronica.height/2;
+  cynthia.scale.x = 1;
+  setTimeout(() => {
+    setObject(veronica, 1, 1);
+    setObject(cynthia, 1, 1);
+    setObject(northshore, 1, 1);
+    setText(cynthiaMoveSchoolText, 1, 1);
+    alignText(cynthiaMoveSchoolText, cynthia);
+  }, 50);
+}
+
+var bullyEndingExplainText = new Text("Bullying others is not a good behavior, as it can cause physical and emotional damage to others. Let's be friends with everyone!", h1S(fC));
+var blackLayer = new PIXI.Graphics();
+blackLayer.beginFill(0x000000, 0.75);
+blackLayer.drawRect(0, 0, app.screen.width, app.screen.height);
+blackLayer.alpha = 0;
+var ndt = new Sprite(Texture("/assets/people/ndt.svg"));
+function bullyEndingExplainF() {
+  hideSprite(veronicaBully3Text);
+  ndt.x = app.screen.width/2;
+  ndt.y = app.screen.height/2;
+  main.addChild(blackLayer);
+  showSprite(blackLayer);
+  setText(bullyEndingExplainText, 1, 1);
+  setObject(ndt, 1, 1);
+}
+
+var assistedEndingExplainText = new Text("It is important to share your feelings with others when you cannot solve a problem on your own. That way, everyone can help you get through that situation!", h1S(hDC));
+var elsthie = new Sprite(Texture("/assets/people/elsthie.svg"));
+function assistedEndingExplainF() {
+  hideSprite(veronicaBully3Text);
+  elsthie.x = app.screen.width/2;
+  elsthie.y = app.screen.height/2;
+  main.addChild(blackLayer);
+  showSprite(blackLayer);
+  setText(assistedEndingExplainText, 1, 1);
+  setObject(elsthie, 1, 1);
+}
+
+var ending1Text = new Text("Seventeen:", h1S());
+var ending2Text = new Text(`Seventeen:\n${ending}`, h1S());
+function ending1F() {
+  hideSprite(bullyEndingExplainText);
+  hideSprite(blackLayer);
+  hideSprite(ndt);
+  hideSprite(esthie);
+  setText(ending1Text, 1, 1);
+  setText(ending2Text, 1);
+  ending2Text = new Text(`Seventeen:\n${ending}`, h1S());
+  setTimeout(() => {
+    showSprite(ending2Text);
+  }, 500);
+  document.title = `Seventeen: ${ending}`;
+}
+
+const copiedText = new Text("Copied!", h1S());
+const retry = new PIXI.Container();
+const retryButton = new Button();
+const home = new PIXI.Container();
+const homeButton = new Button();
+const share = new PIXI.Container();
+const shareButton = new Button();
+function ending2F() {
+  main.removeChild(blackLayer);
+  main.addChild(blackLayer);
+  showSprite(blackLayer);
+  setText(copiedText, 1);
+  retry.x = app.screen.width / 4 - 150;
+  retry.y = app.screen.height / 2;
+  retry.alpha = 0;
+  main.addChild(retry);
+  retryButton.interactive = true;
+  retryButton.buttonMode = true;
+  retry.addChild(retryButton);
+  retryButton.on("click", () => {
+    window.location.reload();
+  });
+  const retryText = new Text("Retry this senerio", h2S);
+  retry.addChild(retryText);
+  retryText.anchor.set(1, 0.5);
+  retryText.x = 280;
+  retryText.y = 40;
+  const reloadSprite = new Sprite(Texture("/assets/games/misc/reload.svg"));
+  retry.addChild(reloadSprite);
+  reloadSprite.anchor.set(0, 0.5);
+  reloadSprite.x = 20;
+  reloadSprite.y = 40;
+  showSprite(retry);
+
+  home.x = app.screen.width / 2 - 150;
+  home.y = app.screen.height / 2;
+  home.alpha = 0;
+  main.addChild(home);
+  homeButton.interactive = true;
+  homeButton.buttonMode = true;
+  home.addChild(homeButton);
+  homeButton.on("click", () => {
+    window.location.href = "/play";
+  });
+  const homeText = new Text("Return to home", h2S);
+  home.addChild(homeText);
+  homeText.anchor.set(1, 0.5);
+  homeText.x = 280;
+  homeText.y = 40;
+  const homeSprite = new Sprite(Texture("/assets/games/misc/home.svg"));
+  home.addChild(homeSprite);
+  homeSprite.anchor.set(0, 0.5);
+  homeSprite.x = 20;
+  homeSprite.y = 40;
+  showSprite(home);
+
+  share.x = (app.screen.width * 3) / 4 - 150;
+  share.y = app.screen.height / 2;
+  share.alpha = 0;
+  main.addChild(share);
+  shareButton.interactive = true;
+  shareButton.buttonMode = true;
+  share.addChild(shareButton);
+  shareButton.on("click", () => {
+    navigator.clipboard.writeText(`Seventeen: ${ending}\n${window.location.href}`);
+    showSprite(copiedText);
+  });
+  const shareText = new Text("Share with others", h2S);
+  share.addChild(shareText);
+  shareText.anchor.set(1, 0.5);
+  shareText.x = 280;
+  shareText.y = 40;
+  const shareSprite = new Sprite(Texture("/assets/games/misc/share.svg"));
+  share.addChild(shareSprite);
+  shareSprite.anchor.set(0, 0.5);
+  shareSprite.x = 20;
+  shareSprite.y = 40;
+  showSprite(share);
 }

@@ -1,0 +1,74 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 2em;
+}
+
+.accordion-item {
+    background-color: var(--bkg);
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: var(--nav-emp);
+    color: var(--bkg);
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--nav-fg);
+}
+
+.accordion-content {
+    background-color: var(--nav-bkg);
+    overflow: hidden;
+    padding: 0 15px;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-container .accordion-item .accordion-header {
+    color: var(--txt);
+}
+
+.accordion-container .accordion-item .accordion-content {
+    text-align: left;
+}
+
+.accordion-container .accordion-item .accordion-content p a {
+    text-decoration: none;
+}
+
+.accordion-container .accordion-item .accordion-content p a:visited {
+  color: var(--fg-hover);
+}

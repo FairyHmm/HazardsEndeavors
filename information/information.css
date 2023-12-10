@@ -6,11 +6,6 @@
 }
 
 .btn {
-    width: 500px;
-}
-
-@media screen and (max-width: 700px) {
-    .btn {
-        width: 100%;
-    }
+    width: 80%;
+    max-width: 500px;
 }

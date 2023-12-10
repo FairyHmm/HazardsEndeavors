@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FAQs</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/information/faqs/faqs.css" />
+    <script src="/js/core.js"></script>
+    <script src="/js/accordion.js"></script>
+  </head>
+
+  <body>
+    <noscript>
+      <p class="noscript">JavaScript is not enabled. Some functions may not work properly.</p>
+      <style>
+        .accordion-content {
+          max-height: 100%;
+        }
+      </style>
+    </noscript>
+    <!--Nav bar-->
+    <div class="nav">
+      <div class="box"></div>
+      <input type="checkbox" id="openSideMenu" class="openSideMenu" onclick="openNav()" />
+      <label for="openSideMenu" class="menuIconToggle">
+        <div class="hamb-line dia p-1"></div>
+        <div class="hamb-line hor"></div>
+        <div class="hamb-line dia p-2"></div>
+      </label>
+      <div id="mySidenav" class="sidenav">
+        <a id="inactive" href="/">Main</a>
+        <a id="inactive" href="/play">Play</a>
+        <a id="inactive" href="/learn">Learn</a>
+        <a id="active" href="/information">Information</a>
+      </div>
+    </div>
+    <!--Text-->
+    <div class="main">
+      <h1>Some frequently asked questions.</h1>
+      <div class="accordion-container">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <h2>What is this site?</h2>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>A site used for education about hazards and other social factors, for everyone!</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <h2>Who created this site?</h2>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>We are a small team of students, and a guide teacher. Check out the <a href="/information/about">About us</a> page for more information.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <h2>Why was this site created?</h2>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>For two reasons</p>
+            <ul>
+              <li>To join a competition called "Science and Technology" for students.</li>
+              <li>To educate people from hazards and other social factors.</li>
+            </ul>
+            <p>It took inprirations from a hurtful fire incident that took the lives of at least 50 people.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <h2>Is this site open-source?</h2>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>It is! Check out the <a href="https://github.com/fairyHmm/HazardsEndeavors/">Github page</a> for <span class="magic-text" id="endeavors">Hazards Endeavors!</span></p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <h2>How to rate and suggest changes to the site?</h2>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>The <a href="/information/about">About us</a> page contains social media links for you to reach out to us. You may also follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqIv8e0L1bxDW2b463QmSub4f_JNb11YAB6PfCPg_z45qCnQ/viewform?usp=send_form">Google form</a> to rate and suggest chanes anonymously.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <h2>I am seeing two links to the website. Which one is correct?</h2>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Before, we used to use the <a href="https://hazend.neocities.org/">Neocities subdomain</a> to host the website. However, there are limitations that made us switch tp the new <a href="https://hazend.pages.dev/">Cloudflare pages subdomain</a>. Both may get updates, but the Cloudflare pages site will be updated more frequently.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

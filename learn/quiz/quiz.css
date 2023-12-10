@@ -1,5 +1,9 @@
 @import "/css/core.css";
 
+body {
+  scrollbar-color: var(--nav-emp) var(--nav-bkg);
+}
+
 .main .buttons {
   flex: 1;
   overflow: hidden;
@@ -64,15 +68,10 @@ input[type="radio"]:checked+label.btn {
 }
 
 .quiz .question .buttons .btn {
-  width: 600px;
+  width: 100%;
+  max-width: 1000px;
   align-self: flex-start;
 
-}
-
-@media screen and (max-width: 700px) {
-  .quiz .question .buttons .btn {
-    width: 100%;
-  }
 }
 
 .submit {

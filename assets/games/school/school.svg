@@ -9,7 +9,7 @@
    id="svg1"
    xml:space="preserve"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="school.svg.2023_12_06_12_25_17.0.svg"
+   sodipodi:docname="school.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.69166114"
-     inkscape:cx="558.79965"
+     inkscape:cx="560.24544"
      inkscape:cy="791.57259"
      inkscape:window-width="1827"
      inkscape:window-height="1057"
@@ -541,7 +541,10 @@
        inkscape:label="fight"
        style="display:inline;stroke-width:5.66929;stroke-dasharray:none"
        transform="translate(-1222.966,-303.09721)"
-       inkscape:highlight-color="#b3b3b3"><path
+       inkscape:highlight-color="#b3b3b3"
+       inkscape:export-filename="fight.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><path
          style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:5.66929;stroke-dasharray:none;stroke-opacity:1"
          d="m 1782.4345,668.09347 c 8.1767,-3.19507 12.1037,-24.23509 39.8176,-27.24948 28.9906,-3.15326 25.7556,22.00443 40.8254,14.43647 7.0833,-8.5159 15.8915,-12.43608 24.5132,0.19626 8.4299,12.35132 18.9256,-9.3226 36.5082,-1.4203 12.0437,5.41286 5.5545,24.26192 20.5507,24.29388 22.7599,0.0485 31.8725,5.74061 39.3868,29.87363 3.6096,11.59234 -13.2333,30.3387 -7.7551,35.58871 11.4558,10.97869 17.846,25.35364 10.0031,39.7919 -4.7637,8.76964 -21.364,8.10003 -19.0998,11.30622 8.2581,11.69375 8.1984,22.32323 1.1886,34.12878 -6.9229,11.65923 -25.9972,5.40007 -28.6773,14.18223 -3.7918,12.42476 -3.8703,31.18367 -20.2328,24.94136 -14.3811,-5.4864 -8.2457,17.38315 -19.7799,24.71402 -19.3786,12.31661 -45.604,7.49271 -59.2913,-8.64115 -10.548,-12.43346 -15.7211,13.17712 -25.3626,15.32067 -25.6866,5.71075 -39.0798,-9.93578 -37.889,-23.39514 1.1908,-13.45936 -33.7012,-2.30309 -30.9232,-20.39414 2.6658,-17.36044 -23.386,-1.59831 -30.1496,-15.8754 -9.1459,-10.32651 -12.1063,-27.3483 -3.4479,-38.93965 11.5496,-12.18301 -16.8594,-19.46137 -9.2541,-35.85563 4.5347,-9.77515 12.2266,-16.94569 3.7355,-29.14599 -9.7134,-13.95648 -2.1142,-39.06671 17.0005,-43.28888 12.8337,-0.50945 22.1095,-6.53392 25.3483,-20.46437 3.1469,-13.53491 26.346,-1.50993 32.9847,-4.104 z"
          id="path42"
@@ -751,9 +754,9 @@
          transform="translate(-227.52173,76.62712)"><tspan
            x="527.55514"
            y="1370.0333"
-           id="tspan8552"><tspan
+           id="tspan1846"><tspan
              style="font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan8550">Bellevue Hospital</tspan></tspan></text></g><g
+             id="tspan1844">Bellevue Hospital</tspan></tspan></text></g><g
        id="g147-0"
        inkscape:label="westerburg"
        transform="matrix(0.67124851,0,0,0.66565441,-135.92992,226.23856)"
@@ -932,9 +935,9 @@
          y="0"><tspan
            x="765.7015"
            y="795.98785"
-           id="tspan8556"><tspan
+           id="tspan1850"><tspan
              style="font-family:Arial;-inkscape-font-specification:Arial"
-             id="tspan8554">Westerburg High</tspan></tspan></text></g><g
+             id="tspan1848">Westerburg High</tspan></tspan></text></g><g
        id="g14"
        inkscape:label="northshore"
        transform="matrix(0.62071984,0,0,0.61899356,-140.30226,223.78052)"

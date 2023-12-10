@@ -1,5 +1,9 @@
 @import "/css/core.css";
 
+body {
+    scrollbar-color: var(--nav-emp) var(--nav-bkg);
+}
+
 .main {
     padding: 2em;
 }

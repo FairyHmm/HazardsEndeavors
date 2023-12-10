@@ -1,0 +1,14 @@
+@import "/css/core.css";
+@import "/css/accordion.css";
+
+body {
+    scrollbar-color: var(--nav-emp) var(--nav-bkg);
+}
+
+#endeavors {
+    background: linear-gradient(to right, hsl(271, 76%, 75%), hsl(219, 79%, 75%), hsl(328, 100%, 75%), hsl(271, 76%, 75%));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

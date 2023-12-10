@@ -44,8 +44,7 @@ body {
   color: var(--txt);
   font-size: 125%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300; 
-  height: 100%;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
