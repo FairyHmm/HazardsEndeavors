@@ -217,7 +217,207 @@
           "score": 0.5
         }
       ],
+      "elements": ["human"]
+    },
+    {
+      "name": "You are in a building when an earthquake occurs. You should:",
+      "options": [
+        {
+          "choice": "Hide under a heavy piece of furniture",
+          "explanation": "Doing this can shield you from debris falling from above.",
+          "score": 1
+        },
+        {
+          "choice": "Immediately leave the building",
+          "explanation": "This could leave you damaged by falling debris.",
+          "score": 0.5
+        },
+        {
+          "choice": "Continue like normal",
+          "explanation": "This is very dangerous as debris can fall on top of you.",
+          "score": 0
+        },
+        {
+          "choice": "Stand in a doorway",
+          "explanation": "While this can help, it is considered an out-dated practice.",
+          "score": 0.5
+        }
+      ],
+      "elements": ["earth"]
+    },
+    {
+      "name": "You are driving on a road when you noticed that there is a mudslide. You should:",
+      "options": [
+        {
+          "choice": "Speed up to try and outrun the mudslide",
+          "explanation": "This can leave you losing control of your vehical and fall off or being swept away.",
+          "score": 0
+        },
+        {
+          "choice": "Stop the car and exit on foot",
+          "explanation": "This is dangerous as the loose rocks can fall on top of you.",
+          "score": 0
+        },
+        {
+          "choice": "Turn around and find an alternate route",
+          "explanation": "This is the best option, as while you have to drive a longer route, you will be safe from the mudslide.",
+          "score": 1
+        }
+      ],
+      "elements": ["earth"]
+    },
+    {
+      "name": "You are driving on a road when you noticed that there is a mudslide. You should:",
+      "options": [
+        {
+          "choice": "Speed up to try and outrun the mudslide",
+          "explanation": "This can leave you losing control of your vehical and fall off or being swept away.",
+          "score": 0
+        },
+        {
+          "choice": "Stop the car and exit on foot",
+          "explanation": "This is dangerous as the loose rocks can fall on top of you.",
+          "score": 0
+        },
+        {
+          "choice": "Turn around and find an alternate route",
+          "explanation": "This is the best option, as while you have to drive a longer route, you will be safe from the mudslide.",
+          "score": 1
+        }
+      ],
+      "elements": ["earth"]
+    },
+    {
+      "name": "In a medical emergency, it is important to assess the situation before taking any action.",
+      "options": [
+        {
+          "choice": "True",
+          "explanation": "It is important to know what the victim is experiencing to know what to do.",
+          "score": 1
+        },
+        {
+          "choice": "False",
+          "explanation": "It is important to know what the victim is experiencing to know what to do.",
+          "score": 0
+        }
+      ],
+      "elements": ["human"]
+    },
+    {
+      "name": "Someone is being shocked by a faulty eletrical wire. You should:",
+      "options": [
+        {
+          "choice": "Call emergency services",
+          "explanation": "The experts will solve the situation as cleanly as possible.",
+          "score": 1
+        },
+        {
+          "choice": "Seperate the person from the wire",
+          "explanation": "There is a risk of elecicuting yourself.",
+          "score": 0
+        },
+        {
+          "choice": "Immediately turn off the power source",
+          "explanation": "It can be hard to do this, and you may get into legal troubles. It is best to call experts.",
+          "score": 0.5
+        }
+      ],
       "elements": ["fire"]
+    },
+    {
+      "name": "It is safe to drive through flooded areas if you are in a large vehicle.",
+      "options": [
+        {
+          "choice": "True",
+          "explanation": "The engine may be dead going through deep bodies of water.",
+          "score": 0
+        },
+        {
+          "choice": "False",
+          "explanation": "The engine may be dead going through deep bodies of water.",
+          "score": 1
+        }
+      ],
+      "elements": ["water"]
+    },
+    {
+      "name": "You are watching TV at home when a thunderstorm occurs. You should:",
+      "options": [
+        {
+          "choice": "Continue like normal",
+          "explanation": "Eletrical equipments can be damaged by the lightning.",
+          "score": 0
+        },
+        {
+          "choice": "Unplug all electrical devices and use flashlights and battery-powered devices.",
+          "explanation": "This can help protecting valuable devices.",
+          "score": 1
+        }
+      ],
+      "elements": ["water", "air"]
+    },
+    {
+      "name": "A tornado just formed. You should:",
+      "options": [
+        {
+          "choice": "Stay outside and watch for the tornado",
+          "explanation": "It is not safe to observe a tornado from outside. Tornadoes are unpredictable and can change direction or intensify rapidly, putting you at risk.",
+          "score": 0
+        },
+        {
+          "choice": "Take shelter in a basement",
+          "explanation": "Taking shelter in a basement or interior room on the lowest level of your home provides the most protection from a tornado.",
+          "score": 1
+        },
+        {
+          "choice": "Continue like normal",
+          "explanation": "This can put your life and the lives of others in danger.",
+          "score": 0
+        },
+        {
+          "choice": "Stay in a vehicle and try to outrun the tornado",
+          "explanation": "Vehicles are not safe during a tornado, and attempting to outrun a tornado can be extremely risky.",
+          "score": 0
+        }
+      ],
+      "elements": ["air"]
+    },
+    {
+      "name": "You are stranded in your vehicle during a snow storm. You should:",
+      "options": [
+        {
+          "choice": "Leave the vehicle and walk to find help",
+          "explanation": "This can be dangerous in a snow storm as it increases the risk of getting lost, encountering hazards, or getting frostbite.",
+          "score": 0
+        },
+        {
+          "choice": "Stay inside the vehicle and run the engine periodically for warmth",
+          "explanation": "This provides shelter and running the engine can provide warmth.",
+          "score": 1
+        }
+      ],
+      "elements": ["air"]
+    },
+    {
+      "name": "You are outside when you feel dizzy. It seems like you have a heatstroke. You should:",
+      "options": [
+        {
+          "choice": "Wait it out",
+          "explanation": "Heatstroke can quickly escalate and become life-threatening, so waiting for the symptoms to subside on their own is not recommended.",
+          "score": 0
+        },
+        {
+          "choice": "Move to a cooler environment",
+          "explanation": "If possible, move to an air-conditioned or shaded area to help cool down your body. Avoid staying in direct sunlight or hot and humid places, as this can worsen your condition.",
+          "score": 1
+        },
+        {
+          "choice": "Self-medication",
+          "explanation": "Attempting to self-medicate with over-the-counter medications or home remedies without proper medical guidance can be risky.",
+          "score": 0.5
+        }
+      ],
+      "elements": ["air"]
     }
   ]
 }
