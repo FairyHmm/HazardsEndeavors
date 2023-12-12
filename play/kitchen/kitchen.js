@@ -5,13 +5,22 @@ const Application = PIXI.Application,
   TextS = PIXI.TextStyle,
   Text = PIXI.Text;
 // Create app
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
+const scaleFactor = 1920 / screenWidth;
 const app = new Application({
   background: "#252627",
-  resizeTo: window,
+  width: screenWidth * scaleFactor,
+  height: screenHeight * scaleFactor,
+  resolution: window.devicePixelRatio,
   antialias: true,
 });
 
 document.body.appendChild(app.view);
+app.renderer.view.style.objectFit = 'contain';
+app.renderer.view.style.width = '100vw';
+app.renderer.view.style.height = '100vh';
+
 const main = new PIXI.Container();
 app.stage.addChild(main);
 
