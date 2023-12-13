@@ -29,6 +29,7 @@ body {
 .person {
     display: flex;
     flex-direction: row;
+    height: 250px;
     width: 50%;
 }
 
@@ -44,6 +45,11 @@ body {
 .thumb {
     flex: 1;
     margin-right: .5em;
+}
+
+.thumb img {
+    
+    height: 100%;
 }
 
 .text {
