@@ -12,9 +12,12 @@
   --card: #ffffff;
   --empty: #00000000;
 
-  --nav-bkg: hsl(276, 90%, 25%);
-  --nav-fg: hsl(276, 90%, 75%);
-  --nav-emp: hsl(276, 90%, 50%);
+  --link-link: hsl(236, 100%, 70%);
+  --link-visited: hsl(281, 100%, 70%);
+
+  --nav-bkg: hsl(276, 100%, 25%);
+  --nav-fg: hsl(276, 100%, 75%);
+  --nav-emp: hsl(276, 100%, 50%);
   --fire-bkg: hsl(0, 100%, 25%);
   --fire-fg: hsl(0, 100%, 75%);
   --fire-emp: hsl(0, 100%, 50%);
@@ -73,4 +76,5 @@ html, body {
   margin: 0;
   font-size: 125%;
   color: var(--txt);
+  z-index: -1;
 }

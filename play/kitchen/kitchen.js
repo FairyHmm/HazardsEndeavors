@@ -407,7 +407,7 @@ function welcomeF() {
 
 const kitchen = new Sprite(Texture("/assets/games/kitchen/kitchen.svg"));
 const pan = new Sprite(Texture("/assets/games/kitchen/pan.svg"));
-const firepan = new Sprite(Texture("/assets/games/fire/firepan.svg"));
+const firepan = new Sprite(Texture("/assets/games/kitchen/firepan.svg"));
 const phoneSide = new Sprite(Texture("/assets/games/phone/phoneside.svg"));
 const matt = new Sprite(Texture("/assets/peeps/matthew/matt.svg"));
 function kitchenF() {
@@ -458,7 +458,6 @@ function mattGoesF() {
 const anniePhone = new Sprite(Texture("/assets/games/misc/phoneannie.svg"));
 const blackLayer = new PIXI.Graphics();
 function phoneAnnieF() {
-  setObject(anniePhone, 1, 1);
   hideSprite(goText);
   toggleShake(phoneSide);
   blackLayer.beginFill(0x000000, 0.75);
@@ -469,6 +468,7 @@ function phoneAnnieF() {
   main.addChild(blackLayer);
   showSprite(blackLayer);
   move(anniePhone, anniePhone.x, app.screen.height / 2, 1000);
+  setObject(anniePhone, 1, 1);
 }
 
 const mattCall = new Sprite(Texture("/assets/peeps/matthew/phone.svg"));
@@ -665,8 +665,8 @@ function bringOutsideF() {
   useSaltButton.interactive = false;
   setObject(grass, 1);
   setObject(mattPanic3, 1, 1);
-  setObject(panFire2, 1, 1);
   setObject(pan2, 1, 1);
+  setObject(panFire2, 1, 1);
   mattPanic3.x = app.screen.width / 3;
   mattPanic3.y = app.screen.height / 2;
   pan2.x = mattPanic3.x + 80;
@@ -753,7 +753,7 @@ function useSaltExplainF() {
   setText(useSaltText, 1, 1);
   setObject(vtl, 1, 1);
   setObject(saltPile2, 1);
-  setObject(fireSalt, 1);
+  setObject(fireSalt, 1, 1);
   vtl.x = app.screen.width / 4;
   vtl.y = app.screen.height / 2;
   saltPile2.x = (app.screen.width * 3) / 4;
@@ -766,7 +766,7 @@ function useSaltExplainF() {
   }, 250);
   setTimeout(() => {
     hideSprite(fireSalt);
-  }, 500);
+  }, 1000);
 }
 
 const matt2 = new Sprite(Texture("/assets/peeps/matthew/matt.svg"));
@@ -780,7 +780,7 @@ function extinguisedF() {
   hideSprite(mattPanic);
   hideSprite(saltPot);
   setText(extinguisedText, 1, 1);
-  setObject(matt2);
+  setObject(matt2, 1, 1);
   matt2.x = mattPanic.x;
   matt2.y = mattPanic.y;
   matt2.scale.x = -1;
@@ -790,6 +790,7 @@ const extinguised2Text = new Text("The Kitchen:\nExtinguised", h1S());
 function endingExtinguisedF() {
   setText(kitchenText, 1, 1);
   setText(extinguised2Text, 1);
+  hideSprite(extinguisedText);
   setTimeout(() => {
     showSprite(extinguised2Text);
   }, 1000);
@@ -851,10 +852,10 @@ const fireOilWater = new Sprite(Texture("/assets/games/fire/fire1.svg"));
 function oilExplain2F() {
   hideSprite(oilFloatText);
   hideSprite(oilWaterGlass);
-  setText(waterOnOilText, 1);
-  setObject(fireOilWater, 1, 1);
+  setText(waterOnOilText, 1, 1);
   setObject(waterPatch, 1);
   setObject(oilPatch, 1, 1);
+  setObject(fireOilWater, 1, 1);
   fireOilWater.x = (app.screen.width * 3) / 4;
   fireOilWater.y = app.screen.height / 2 - 30;
   waterPatch.x = (app.screen.width * 3) / 4;
@@ -866,7 +867,7 @@ function oilExplain2F() {
   setTimeout(() => {
     timeout();
     showSprite(waterPatch);
-  }, 500);
+  }, 600);
 }
 
 const whoToCallText = new Text("Who should he call?", h1S());

@@ -1,7 +1,7 @@
 @import "/css/core.css";
 
 body {
-    scrollbar-color: var(--nav-emp) var(--nav-bkg);
+    scrollbar-color: var(--nav-emp) var(--nav-bkg) !important;
 }
 
 .main {
@@ -59,6 +59,10 @@ li p a {
     text-decoration: none;
 }
 
+.sessions li p a:link {
+    color: var(--link-link);
+}
+
 .sessions li p a:visited {
-  color: var(--nav-fg);
+  color: var(--link-visited);
 }

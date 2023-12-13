@@ -1,3 +1,5 @@
+@import "/css/core.css";
+
 .main {
     display: flex;
     justify-content: center;
@@ -69,6 +71,10 @@
     text-decoration: none;
 }
 
+.accordion-container .accordion-item .accordion-content p a:link {
+    color: var(--link-link);
+}
+
 .accordion-container .accordion-item .accordion-content p a:visited {
-  color: var(--fg-hover);
+  color: var(--link-visited);
 }

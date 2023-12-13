@@ -1,5 +1,7 @@
 function toggleCards() {
-  var cards = document.getElementsByClassName("cards");
-  cards[0].style.opacity = "1";
-  cards[0].style.pointerEvents = "auto";
+  var cards = document.getElementById("cards");
+  cards.style.opacity = "1";
+  cards.style.display = "grid";
+  cards.style.pointerEvents = "auto";
+  cards.style.transition = "opacity .2s";
 }

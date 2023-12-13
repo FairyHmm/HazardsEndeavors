@@ -1,11 +1,13 @@
 @import "/css/core.css";
 @import "/css/cards.css";
 
+body {
+  scrollbar-color: var(--nav-emp) var(--nav-bkg)
+}
+
 .cards {
   opacity: 0;
   transition: opacity 1s;
   pointer-events: none;
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  display: none;
 }
